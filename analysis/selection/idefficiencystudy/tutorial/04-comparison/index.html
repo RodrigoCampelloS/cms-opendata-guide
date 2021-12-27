@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-sideband-subtraction-method-code-stores-its-files" class="md-skip">
+        <a href="#comparison" class="md-skip">
           Skip to content
         </a>
       
@@ -818,20 +818,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../efficiencytool/" class="md-nav__link">
-        Efficiency Tool
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -839,18 +825,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_4" type="checkbox" id="__nav_4_2_5_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_3" type="checkbox" id="__nav_4_2_5_3" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_2_5_4">
+        <label class="md-nav__link" for="__nav_4_2_5_3">
           Tutorial
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Tutorial" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_4">
+        <label class="md-nav__title" for="__nav_4_2_5_3">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
         </label>
@@ -910,6 +896,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Comparison
@@ -925,6 +913,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -977,6 +967,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-systematic/" class="md-nav__link">
+        Systematic
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -993,18 +997,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_5" type="checkbox" id="__nav_4_2_5_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_4" type="checkbox" id="__nav_4_2_5_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_2_5_5">
+        <label class="md-nav__link" for="__nav_4_2_5_4">
           Reference Guide (SB)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reference Guide (SB)" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_5">
+        <label class="md-nav__title" for="__nav_4_2_5_4">
           <span class="md-nav__icon md-icon"></span>
           Reference Guide (SB)
         </label>
@@ -1152,18 +1156,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_6" type="checkbox" id="__nav_4_2_5_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_5" type="checkbox" id="__nav_4_2_5_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_2_5_6">
+        <label class="md-nav__link" for="__nav_4_2_5_5">
           Reference Guide (Fit)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reference Guide (Fit)" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_6">
+        <label class="md-nav__title" for="__nav_4_2_5_5">
           <span class="md-nav__icon md-icon"></span>
           Reference Guide (Fit)
         </label>
@@ -1590,6 +1594,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1649,8 +1655,7 @@
 </a>
 
 
-  <h1>Comparison</h1>
-
+<h1 id="comparison">Comparison<a class="headerlink" href="#comparison" title="Permanent link">&para;</a></h1>
 <h2 id="how-sideband-subtraction-method-code-stores-its-files">How sideband subtraction method code stores its files<a class="headerlink" href="#how-sideband-subtraction-method-code-stores-its-files" title="Permanent link">&para;</a></h2>
 <p>the Sideband subtraction code saves every efficiency plot in <code>efficiency/plots/</code> folder inside a single <code>generated_hist.root</code> file. Lets check it!</p>
 <p>You're probably on the <code>main</code> directory. Lets go back a directory.</p>
@@ -1701,7 +1706,7 @@ root [1]
 <p><img alt="TBrowser showing efficiency plot for sideband subtraction method" src="../../../../../images/analysis/cmsefficiency/tutorial/04/prints/tbrowser3.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To close this window, click on terminal and press <kbd>Ctrl + C</kbd>. This command stops any processes happening in the terminal.</p>
+<p>To close this window, click on terminal and press <code>Ctrl</code> + <code>C</code>. This command stops any processes happening in the terminal.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Key Point</p>
@@ -1753,7 +1758,9 @@ ls
 </div>
 <p>Everything is up to date to compare sideband subtraction's results between real data and simulations, except it is comparing standalone and global muons. As we are  looking for tracker muons efficiencies only, you should <strong>switch to false variables for Standalone and Global</strong>.</p>
 <p>Also, you will need to change the <code>useScheme</code> variable to plot what you want to plot. As we want to plot <strong>efficiency of real data and simulated data</strong>, the value has to be 3.</p>
-<details class="example"><summary>See result scructure</summary><p>If you deleted the right lines, your code now should be like this:</p>
+<details class="example">
+<summary>See result scructure</summary>
+<p>If you deleted the right lines, your code now should be like this:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//CONFIGS</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">useScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
@@ -1780,7 +1787,7 @@ Done. All result files can be found at &quot;../results/Comparison_Upsilon_Sideb
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The command above to run the code will display three new windows on your screen with comparison plots. You can avoid them by running straight the <strong>command below</strong>. </p>
+<p>The command above to run the code will display three new windows on your screen with comparison plots. You can avoid them by running straight the <strong>command below</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">compare_efficiency</span><span class="p">.</span><span class="n">cpp</span><span class="w"></span>
 </code></pre></div>
 <p>In this case, to check it results you are going to need go for result folder (printed on code run) and check images there by yourself.
@@ -1949,7 +1956,9 @@ Notice that:</p>
 <p>As you did with the last 2 extras challenges, try to redo this exercise comparing results between challenges.</p>
 </div>
 <hr />
-<details class="example"><summary>Extra - recreate ntuples</summary><p>If you are looking go far than this workshop, you can try to recreate those ntuples we used here. Try to get results from a J/ψ decaying in dimuons ntuple @7 TeV. The code used to create them can be <a href="https://github.com/sandrofonseca/TagAndProbe">found here</a>.</p>
+<details class="example">
+<summary>Extra - recreate ntuples</summary>
+<p>If you are looking go far than this workshop, you can try to recreate those ntuples we used here. Try to get results from a J/ψ decaying in dimuons ntuple @7 TeV. The code used to create them can be <a href="https://github.com/sandrofonseca/TagAndProbe">found here</a>.</p>
 <p>Concerning the datasets used to produce these extra exercises, you can find them in these links below:</p>
 <ul>
 <li><a href="http://opendata.cern.ch/record/27">Real data (2011 legacy)</a></li>
@@ -1987,13 +1996,13 @@ Notice that:</p>
       
       
         
-        <a href="../../sidebandreferenceguide/macro/" class="md-footer__link md-footer__link--next" aria-label="Next: The Macro" rel="next">
+        <a href="../05-systematic/" class="md-footer__link md-footer__link--next" aria-label="Next: Systematic" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              The Macro
+              Systematic
             </div>
           </div>
           <div class="md-footer__button md-icon">
