@@ -1630,7 +1630,7 @@
 <h1 id="fitting">Fitting<a class="headerlink" href="#fitting" title="Permanent link">&para;</a></h1>
 <h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
 <p>In order to run this exercise you do not really need to be in a CMSSW area.  It would be actually better if you worked outside your usual CMSSW_5_3_32 environment.  So, if, for instance, you are working with the Docker container, instead of working on <code>/home/cmsusr/CMSSW_5_3_32/src</code> you could work on any directory you can create at the <code>/home/cmsusr</code> level.  Alternatively, you could work directly on your own host machine if you managed to install ROOT on it.</p>
-<p>For this example we assume you will be working in either the Docker container or the virtual machine.  </p>
+<p>For this example we assume you will be working in either the Docker container or the virtual machine.</p>
 <p>Since we will be needing ROOT version greater than 6, then do not forget to set it up from LCG (as you learned in the ROOT pre-exercise) by doing:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> /cvmfs/sft.cern.ch/lcg/views/LCG_95/x86_64-slc6-gcc8-opt/setup.sh
 </code></pre></div>
@@ -1745,7 +1745,7 @@ You'll see that in order to create a <code>TEfficiency</code> object, one of the
 
 <span class="k">return</span><span class="w"> </span><span class="n">hist</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w">   </span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </details>
 <p>To plot the efficiency we used the <code>src/get_efficiency.h</code> function.</p>
@@ -1811,9 +1811,9 @@ You'll see that in order to create a <code>TEfficiency</code> object, one of the
 <div class="highlight"><pre><span></span><code>root -l -b -q efficiency.cpp
 </code></pre></div>
 <p>If everything went correctly you should have a 'Pt_globalMuon.root' in the path below.</p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span> results/efficiencies/efficiency/Jpsi_Run_2011/
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> results/efficiencies/efficiency/Jpsi_Run_2011/
 </code></pre></div>
-We will need to run the code again with a few changes so go back to the main file.</p>
+<p>We will need to run the code again with a few changes so go back to the main file.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ../../../..
 </code></pre></div>
 <p>Now we need to create the Monte Carlo(MC) data to compare with the real one, in order to do that we will need to change the ´efficiency.cpp´ code, you will have to include the ´#include "src/dofits/DoFit_Jpsi_MC.h"´ and comment the ´#include "src/dofits/DoFit_Jpsi_Run.h"´ part, your code should look like this:</p>
@@ -1864,7 +1864,7 @@ We will need to run the code again with a few changes so go back to the main fil
 
 <span class="w">    </span><span class="n">compare_efficiency</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;results/efficiencies/efficiency/Jpsi_Run_2011/Pt_globalMuon.root&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;results/efficiencies/efficiency/Jpsi_MC_2020/Pt_globalMuon.root&quot;</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//Path where is going to save results png for every bin </span>
+<span class="w">    </span><span class="c1">//Path where is going to save results png for every bin</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">path_bins_fit_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;results/bins_fit/efficiency/&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">create_folder</span><span class="p">(</span><span class="n">path_bins_fit_folder</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>

@@ -952,8 +952,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generating-uncertanties" class="md-nav__link">
-    Generating uncertanties
+  <a href="#generating-uncertainties" class="md-nav__link">
+    Generating uncertainties
   </a>
   
 </li>
@@ -1618,8 +1618,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generating-uncertanties" class="md-nav__link">
-    Generating uncertanties
+  <a href="#generating-uncertainties" class="md-nav__link">
+    Generating uncertainties
   </a>
   
 </li>
@@ -1657,7 +1657,7 @@
 
 <h1 id="systematic">Systematic<a class="headerlink" href="#systematic" title="Permanent link">&para;</a></h1>
 <h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
-<p>If you have done the fitting tutorial you already have done this part so you may go directly to "Generating uncertanties"
+<p>If you have done the fitting tutorial you already have done this part so you may go directly to "Generating uncertainties"
 Clone this repository and go to the fitting folder.</p>
 <div class="highlight"><pre><span></span><code>git clone git://github.com/allanjales/TagAndProbe
 <span class="nb">cd</span> TagAndProbe/efficiency_tools/fitting
@@ -1666,12 +1666,12 @@ Clone this repository and go to the fitting folder.</p>
 <div class="highlight"><pre><span></span><code>https://cernbox.cern.ch/index.php/s/lqHEasYWJpOZsfq
 </code></pre></div>
 <h2 id="data-simplifying">Data simplifying<a class="headerlink" href="#data-simplifying" title="Permanent link">&para;</a></h2>
-<p>In order to run this code, use this command to simplify the data so that it can be read by the RooFit root library. </p>
+<p>In order to run this code, use this command to simplify the data so that it can be read by the RooFit root library.</p>
 <div class="highlight"><pre><span></span><code>root simplify_data.cpp 
 </code></pre></div>
-<p>This will create a "TagAndProbe_Jpsi_Run2011.root" file, this process may take a few minutes. move the file to the DATA folder. </p>
-<h2 id="generating-uncertanties">Generating uncertanties<a class="headerlink" href="#generating-uncertanties" title="Permanent link">&para;</a></h2>
-<p>To estimate the systematic error we will need first to get some uncertanties from the DATA. To do that run this code.</p>
+<p>This will create a "TagAndProbe_Jpsi_Run2011.root" file, this process may take a few minutes. move the file to the DATA folder.</p>
+<h2 id="generating-uncertainties">Generating uncertainties<a class="headerlink" href="#generating-uncertainties" title="Permanent link">&para;</a></h2>
+<p>To estimate the systematic error we will need first to get some uncertainties from the DATA. So, to do that, run the following code.</p>
 <div class="highlight"><pre><span></span><code>root -l -b -q plot_sys_efficiency.cpp
 </code></pre></div>
 <p>By default this code will calculate the efficiency for the global muon Eta, this can be altered by opening the "plot_sys_efficiency.cpp" and choosing to comment and uncoment the Muon ID and quantity you desire. This process may take several minutes to complete.</p>
@@ -1705,11 +1705,11 @@ Clone this repository and go to the fitting folder.</p>
 <span class="c1">//string quantity = &quot;Eta&quot;;    double bins[] = {0.0, 0.4, 0.6, 0.95, 1.2, 1.4, 1.6, 1.8, 2.4};</span>
 </code></pre></div>
 <h2 id="systematic-efficiency-overplot">Systematic efficiency overplot<a class="headerlink" href="#systematic-efficiency-overplot" title="Permanent link">&para;</a></h2>
-<p>In order to better understand the results of the last part, this code will put all the different plots created previously in a image. </p>
+<p>To better understand the results of the last part, this code will put all the different plots created previously in an image.</p>
 <div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="n">overplot_efficiencies</span><span class="p">.</span><span class="n">cpp</span><span class="w"></span>
 </code></pre></div>
 <p>You should get a result like this:</p>
-<p><img alt="Efficiency Systematic Overplot" src="../../../../../images/analysis/cmsefficiency/Sys_Efficiency_overplot1d.png" /></p>
+<p><img alt="Efficiency Systematic Overplot 1D" src="../../../../../images/analysis/cmsefficiency/Sys_Efficiency_overplot1d.png" /></p>
 <h2 id="2d-systematic-efficiency-overplot">2D Systematic efficiency overplot<a class="headerlink" href="#2d-systematic-efficiency-overplot" title="Permanent link">&para;</a></h2>
 <p>This code generates a 2D systematic efficiency overplot, it outputs a .root that contains the efficiency histograms that can be visualised by the root TBrowser.</p>
 <div class="highlight"><pre><span></span><code>root -l -b -q plot_sys_efficiency_2d.cpp 
