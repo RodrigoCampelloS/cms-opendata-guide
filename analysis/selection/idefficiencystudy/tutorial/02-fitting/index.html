@@ -1836,7 +1836,7 @@ You'll see that in order to create a <code>TEfficiency</code> object, one of the
 <span class="c1">//string quantity = &quot;Pt&quot;;     double bins[] = {0., 40.};</span>
 </code></pre></div>
 <p>Run the efficiency.cpp again and you will have 2 new folders at results/efficiencies/efficiency one "Jpsi_MC_2020" and other "Jpsi_Run_2011".If you want to see each individual efficiency you can use the TBrowser to open the globalMuon_Pt_efficiency file.</p>
-<p>Now, in order to make the comparison between real and MC data we will need to change the efficiency.cpp once more, to do this you must include #include the "compare_efficiency.h" and put the code below in the efficiency.cpp file.</p>
+<p>Now, in order to make the comparison between real and MC data we will need to change the efficiency.cpp once more, to do this you must include #include the "compare_efficiency.cpp" and put the code below in the efficiency.cpp file.</p>
 <div class="highlight"><pre><span></span><code>compare_efficiency<span class="o">(</span>quantity, <span class="s2">&quot;results/efficiencies/efficiency/Jpsi_Run_2011/Pt_globalMuon.root&quot;</span>, <span class="s2">&quot;results/efficiencies/efficiency/Jpsi_MC_2020/Pt_globalMuon.root&quot;</span><span class="o">)</span><span class="p">;</span>
 </code></pre></div>
 <p>So your code should look like this.</p>
@@ -1846,7 +1846,7 @@ You'll see that in order to create a <code>TEfficiency</code> object, one of the
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/create_folder.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/get_efficiency.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/make_TH1D.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/compare_efficiency.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;tests/compare_efficiency.cpp&quot;</span><span class="cp"></span>
 
 <span class="c1">//Which Muon Id do you want to study?</span>
 <span class="c1">//string MuonId   = &quot;trackerMuon&quot;;</span>
