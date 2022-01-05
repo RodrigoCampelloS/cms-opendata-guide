@@ -903,6 +903,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-simplifying" class="md-nav__link">
+    Data simplifying
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-fitting-method" class="md-nav__link">
     The Fitting Method
   </a>
@@ -1597,6 +1604,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-simplifying" class="md-nav__link">
+    Data simplifying
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-fitting-method" class="md-nav__link">
     The Fitting Method
   </a>
@@ -1629,7 +1643,7 @@
 
 <h1 id="fitting">Fitting<a class="headerlink" href="#fitting" title="Permanent link">&para;</a></h1>
 <h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
-<p>In order to run this exercise you do not really need to be in a CMSSW area.  It would be actually better if you worked outside your usual CMSSW_5_3_32 environment.  So, if, for instance, you are working with the Docker container, instead of working on <code>/home/cmsusr/CMSSW_5_3_32/src</code> you could work on any directory you can create at the <code>/home/cmsusr</code> level.  Alternatively, you could work directly on your own host machine if you managed to install ROOT on it.</p>
+<p>In order to run this exercise you do not really need to be in a CMSSW area.  It would be actually better if you worked outside your usual CMSSW_5_3_32 environment.  So, if, for instance, you are working with the Docker container, instead of working on <code>/home/cmsusr/CMSSW_5_3_32/src</code> you could work on any directory you can create at the <code>/home/cmsusr</code> level. Alternatively, you could work directly on your own host machine if you managed to install ROOT on it.</p>
 <p>For this example we assume you will be working in either the Docker container or the virtual machine.</p>
 <p>Since we will be needing ROOT version greater than 6, then do not forget to set it up from LCG (as you learned in the ROOT pre-exercise) by doing:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> /cvmfs/sft.cern.ch/lcg/views/LCG_95/x86_64-slc6-gcc8-opt/setup.sh
@@ -1637,6 +1651,13 @@
 <p>Clone the repository and go to the fitting method tutorial:</p>
 <div class="highlight"><pre><span></span><code>git clone git://github.com/allanjales/TagAndProbe
 <span class="nb">cd</span> TagAndProbe/efficiency_tools/fitting
+</code></pre></div>
+<p>You will also need to download the Run2011AMuOnia_mergeNtuple.root file using this link.</p>
+<div class="highlight"><pre><span></span><code>https://cernbox.cern.ch/index.php/s/lqHEasYWJpOZsfq
+</code></pre></div>
+<h2 id="data-simplifying">Data simplifying<a class="headerlink" href="#data-simplifying" title="Permanent link">&para;</a></h2>
+<p>In order to run this code, use this command to simplify the data so that it can be read by the RooFit root library.</p>
+<div class="highlight"><pre><span></span><code>root simplify_data.cpp 
 </code></pre></div>
 <h2 id="the-fitting-method">The Fitting Method<a class="headerlink" href="#the-fitting-method" title="Permanent link">&para;</a></h2>
 <p>First, a brief explanation of the method we’ll be studying.</p>
@@ -1660,7 +1681,7 @@ root -l TagAndProbe_Jpsi_MC.root
 <p>In the following plots, remember that the units of the x axis are in GeV/c.</p>
 </div>
 <p>Now, before we start fitting the invariant mass it's important to look at it's shape first. To visualize our data's invariant mass, do (within ROOT):</p>
-<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">tagandprobe</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="s">&quot;InvariantMass&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">tagandprobe</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="s">&quot;InvariantMass&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p><img alt="Invariant Mass histogram from the data analysed" src="../../../../../images/analysis/cmsefficiency/tutorial/02/InvariantMassJpsi.png" /></p>
 <p>If you got the previous result, we're ready to go.</p>
@@ -1678,15 +1699,15 @@ root -l TagAndProbe_Jpsi_MC.root
 | PassingProbeStandAloneMuon |
 | PassingProbeGlobalMuon |</p>
 <p>We'll start by calculating the efficiency as a function of pT.  It is useful to have an idea of the distribution of the quantity we want to study. In order to do this, we’ll repeat the steps previously used to plot the invariant mass, but now for the <code>ProbeMuon_Pt</code> variable.</p>
-<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">tagandprobe</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="s">&quot;ProbeMuon_Pt&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">tagandprobe</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="s">&quot;ProbeMuon_Pt&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p><img alt="pT plot of data in linear scale" src="../../../../../images/analysis/cmsefficiency/tutorial/02/ProbeMuonPt.png" /></p>
 <p>Hmm.. seems like our domain is larger than we need it to be. To fix this, we can apply a constraint to our plot. Try:</p>
-<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">tagandprobe</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="s">&quot;ProbeMuon_Pt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ProbeMuon_Pt &lt; 20&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">tagandprobe</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="s">&quot;ProbeMuon_Pt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ProbeMuon_Pt &lt; 20&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p><img alt="pT plot of data in log scale" src="../../../../../images/analysis/cmsefficiency/tutorial/02/ProbeMuonPtCortes.png" /></p>
 <p>Exit ROOT and get back to the main area:</p>
-<div class="highlight"><pre><span></span><code>root <span class="o">[]</span> .q
+<div class="highlight"><pre><span></span><code>.q
 <span class="nb">cd</span> ..
 </code></pre></div>
 <p>Now that you're acquainted with the data, open the  <code>efficiency.cpp</code> file.
