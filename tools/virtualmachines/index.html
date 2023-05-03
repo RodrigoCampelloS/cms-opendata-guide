@@ -12,8 +12,14 @@
       
         <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/tools/virtualmachines/">
       
+      
+        <link rel="prev" href="../docker/">
+      
+      
+        <link rel="next" href="../../cmssw/cmsswoverview/">
+      
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
@@ -21,33 +27,32 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font:"Lato";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -58,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -80,7 +85,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="CMS Open Data Guide" class="md-header__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
       
@@ -88,7 +95,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,10 +114,12 @@
       </div>
     </div>
     
+      
+    
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -118,13 +127,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -135,7 +144,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -144,10 +153,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/cernopendata/cms-opendata-guide/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/cernopendata/cms-opendata-guide" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     cms-opendata-guide
@@ -188,10 +197,10 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/cernopendata/cms-opendata-guide/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/cernopendata/cms-opendata-guide" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     cms-opendata-guide
@@ -222,27 +231,26 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-        <label class="md-nav__link" for="__nav_2">
-          Computing Tools
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          CMS Open Data
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Computing Tools" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Computing Tools
+          CMS Open Data
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -252,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cernportal/" class="md-nav__link">
+      <a href="../../cmsOpenData/cernportal/" class="md-nav__link">
         CERN Open Data Portal
       </a>
     </li>
@@ -266,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cmsopendata/" class="md-nav__link">
+      <a href="../../cmsOpenData/cmsopendata/" class="md-nav__link">
         CMS Open Data
       </a>
     </li>
@@ -280,13 +288,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../cmstwiki/" class="md-nav__link">
-        CMS Twiki
+      <a href="../../cmsOpenData/findingData/" class="md-nav__link">
+        Finding Data
       </a>
     </li>
   
 
             
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cmsOpenData/workshops/" class="md-nav__link">
+        Workshops
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Computing Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computing Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -367,7 +426,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -451,18 +510,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           CMSSW
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CMSSW" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           CMSSW
         </label>
@@ -555,18 +615,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Analysis
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Analysis" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Analysis
         </label>
@@ -581,18 +642,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_1">
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
           Data and Simulation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Data and Simulation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
           Data and Simulation
         </label>
@@ -656,22 +718,37 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           Selection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Selection" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Selection
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysis/selection/validatedRuns/" class="md-nav__link">
+        Validated Runs
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -692,40 +769,41 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../analysis/selection/objects/" class="md-nav__link">
-        Physics Objects
-      </a>
-    </li>
-  
-
-            
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          Physics Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physics Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_2_3">
-          Specific Physics Objects
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Specific Physics Objects" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          Specific Physics Objects
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../analysis/selection/objects/objects/" class="md-nav__link">
+        Physics Objects
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -761,8 +839,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/selection/objects/egamma/" class="md-nav__link">
-        Electrons and Photons
+      <a href="../../analysis/selection/objects/electrons/" class="md-nav__link">
+        Electrons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysis/selection/objects/photons/" class="md-nav__link">
+        Photons
       </a>
     </li>
   
@@ -797,22 +889,22 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
             
               
   
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/selection/objectid/" class="md-nav__link">
-        Physics Object ID
+      <a href="../../analysis/selection/objects/taus/" class="md-nav__link">
+        Taus
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -827,18 +919,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" type="checkbox" id="__nav_4_2_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5">
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
           ID Efficiency study
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="ID Efficiency study" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
           <span class="md-nav__icon md-icon"></span>
           ID Efficiency study
         </label>
@@ -881,50 +974,23 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_3" type="checkbox" id="__nav_4_2_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5_3">
+        <label class="md-nav__link" for="__nav_5_2_4_3" id="__nav_5_2_4_3_label" tabindex="0">
           Tutorial
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Tutorial" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_3">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_3">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analysis/selection/idefficiencystudy/tutorial/01-introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analysis/selection/idefficiencystudy/tutorial/02-fitting/" class="md-nav__link">
-        Fitting
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -968,6 +1034,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysis/selection/idefficiencystudy/tutorial/06-Z-systematic/" class="md-nav__link">
+        Z-Systematic
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -984,18 +1064,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_4" type="checkbox" id="__nav_4_2_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5_4">
+        <label class="md-nav__link" for="__nav_5_2_4_4" id="__nav_5_2_4_4_label" tabindex="0">
           Reference Guide (SB)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Reference Guide (SB)" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_4">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_4">
           <span class="md-nav__icon md-icon"></span>
           Reference Guide (SB)
         </label>
@@ -1143,18 +1224,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_5" type="checkbox" id="__nav_4_2_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5_5">
+        <label class="md-nav__link" for="__nav_5_2_4_5" id="__nav_5_2_4_5_label" tabindex="0">
           Reference Guide (Fit)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Reference Guide (Fit)" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_5">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_5">
           <span class="md-nav__icon md-icon"></span>
           Reference Guide (Fit)
         </label>
@@ -1218,18 +1300,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Luminosity
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Luminosity" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Luminosity
         </label>
@@ -1265,18 +1348,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Backgrounds
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Backgrounds" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Backgrounds
         </label>
@@ -1326,18 +1410,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           Systematics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Systematics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           Systematics
         </label>
@@ -1380,18 +1465,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_3" type="checkbox" id="__nav_4_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5_3">
+        <label class="md-nav__link" for="__nav_5_5_3" id="__nav_5_5_3_label" tabindex="0">
           Physics Object Uncertainty
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Physics Object Uncertainty" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_5_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_3">
           <span class="md-nav__icon md-icon"></span>
           Physics Object Uncertainty
         </label>
@@ -1476,18 +1562,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
           Interpretation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Interpretation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           Interpretation
         </label>
@@ -1626,13 +1713,14 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-<a href="https://github.com/cernopendata/cms-opendata-guide/edit/master/docs/tools/virtualmachines.md" title="Edit this page" class="md-content__button md-icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-</a>
+                  
+
+  
+  
 
 
 <h1 id="virtual-machines">Virtual machines<a class="headerlink" href="#virtual-machines" title="Permanent link">&para;</a></h1>
@@ -1640,18 +1728,18 @@
 <p>Therefore, in order to mantain our ability to study these data, we have to rely on technologies that help us preserve adequate computer environments.  One way of doing this is by using virtual machines.</p>
 <p>In simple words, a <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> is an emulation of a computer system that can run within another system.  The latter is usually known as the <em>host</em>.</p>
 <h2 id="open-data-releases-cmssw-versions-and-operating-systems">Open data releases, CMSSW versions and operating systems<a class="headerlink" href="#open-data-releases-cmssw-versions-and-operating-systems" title="Permanent link">&para;</a></h2>
-<p>CMS open data from our 2010 release can be studied using CMSSW_4_2_8, a version of the <a href="../../cmssw/cmsswoverview">CMSSW</a> software that used to run under Scientific Linux CERN 5 (slc5) operating system.  Likewise, open data from our 2011/2012 release used CMSSW_5_3_32 under Scientific Linux CERN 6 (slc6).</p>
+<p>CMS open data from our 2010 release can be studied using CMSSW_4_2_8, a version of the <a href="../../cmssw/cmsswoverview">CMSSW</a> software that used to run under Scientific Linux CERN 5 (slc5) operating system.  Likewise, open data from our 2011/2012 release used CMSSW_5_3_32 and those from 2015 release CMSSW_7_6_7 under Scientific Linux CERN 6 (slc6).</p>
 <p>The virtual machines that are used to analyze these data, therefore, need to consider all these compatibility subtleties.</p>
 <h2 id="virtual-machine-images">Virtual machine images<a class="headerlink" href="#virtual-machine-images" title="Permanent link">&para;</a></h2>
 <p>In practical terms, a virtual machine image is a computer file that has all the right ingredients to create a virtual computer inside a given host.  This file, however, needs to be <em>decoded</em> by a virtual machine interpreter, usually known as <a href="https://en.wikipedia.org/wiki/Hypervisor">hypervisor</a>, which runs on the host machine.  One of the most famous hypervisors is Oracle's <a href="https://en.wikipedia.org/wiki/VirtualBox">VirtualBox</a>.</p>
 <h2 id="cms-virtual-images">CMS virtual images<a class="headerlink" href="#cms-virtual-images" title="Permanent link">&para;</a></h2>
-<p>The most current images for CMS open data usage are described separately in the CERN Open Portal site for <a href="http://opendata.cern.ch/record/250">2010</a> and <a href="http://opendata.cern.ch/record/252">2011/2012</a>.  They come equiped with the <a href="http://root.cern.ch/">ROOT</a> framework, <a href="http://cms-sw.github.io/">CMSSW</a> and <a href="https://cvmfs.readthedocs.io/en/stable/index.html">CVMFS</a> access.</p>
+<p>The most current images for CMS open data usage are described separately in the CERN Open Portal site for <a href="http://opendata.cern.ch/record/250">2010</a> and <a href="http://opendata.cern.ch/record/252">2011/2012/2015</a>.  They come equiped with the <a href="http://root.cern.ch/">ROOT</a> framework, <a href="http://cms-sw.github.io/">CMSSW</a> and <a href="https://cvmfs.readthedocs.io/en/stable/index.html">CVMFS</a> access.</p>
 <div class="admonition note">
 <p class="admonition-title">Remember</p>
-<p>When installing a CMS virtual machine (following the <a href="#installation">instructions</a> below), always use the latest image file available for <a href="http://opendata.cern.ch/record/250">2010</a> or <a href="http://opendata.cern.ch/record/252">2011/2012</a> data.</p>
+<p>When installing a CMS virtual machine (following the <a href="#installation">instructions</a> below), always use the latest image file available for <a href="http://opendata.cern.ch/record/250">2010</a> or <a href="http://opendata.cern.ch/record/252">2011/2012/2015</a> data.</p>
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Detailed instructions on how to install the CERN virtual machines can be found in the <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010">2010</a> and <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011">2011/2012</a> virtual machine installation guides from the CERN Open Portal.  Choose the one to follow depending on the data release you will be working on.</p>
+<p>Detailed instructions on how to install the CERN virtual machines can be found in the <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010">2010</a>, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011">2011/2012</a> and <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2015">2015</a> virtual machine installation guides from the CERN Open Portal.  Choose the one to follow depending on the data release you will be working on.</p>
 <p>In summary, the basic steps are as follows:</p>
 <ul>
 <li>Download and install the latest (or even better, the latest tested) version of <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>.  Note that it is available for an ample range of platforms.</li>
@@ -1659,58 +1747,29 @@
 <p>Download the <strong>latest</strong> CMS virtual image file.  Choose between <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010#downloading-and-creating-a-virtual-machine">2010</a> or <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011#downloading-and-creating-a-virtual-machine">2011/2012</a>, depending on the data release of interest. Once downloaded, import the image file into VirtualBox.</p>
 <div class="admonition note">
 <p class="admonition-title">Remember</p>
-<p>Always use the latest image file available for <a href="http://opendata.cern.ch/record/250">2010</a> or <a href="http://opendata.cern.ch/record/252">2011/2012</a>. Older ones are usually deprecated.</p>
+<p>Always use the latest image file available for <a href="http://opendata.cern.ch/record/250">2010</a> or <a href="http://opendata.cern.ch/record/252">2011/2012/2015</a>. Older ones are usually deprecated.</p>
 </div>
 </li>
 <li>
-<p>Test the environment; again, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010#step-2-how-to-test-validate">2010</a> or <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011#step-2-how-to-test-validate">2011/2012</a>, depending on the release.</p>
+<p>Test the environment; again, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010#step-2-how-to-test-validate">2010</a>, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011#step-2-how-to-test-validate">2011/2012</a> and <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2015#step-2-how-to-test-validate">2015</a>, depending on the release.</p>
 </li>
-<li>Finally, check for any known issues or limitations (<a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010#known-issues-limitations">2010</a>, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011#known-issues-limitations">2011/2012</a>.)</li>
+<li>Finally, check for any known issues or limitations (<a href="http://opendata.cern.ch/docs/cms-virtual-machine-2010#known-issues-limitations">2010</a>, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2011#known-issues-limitations">2011/2012</a>, <a href="http://opendata.cern.ch/docs/cms-virtual-machine-2015#known-issues-limitations">2015</a>.)</li>
 </ul>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Docker
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../cmssw/cmsswoverview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Overview
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1732,10 +1791,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   </body>

@@ -12,8 +12,14 @@
       
         <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/analysis/systematics/objectsuncertain/btaguncertain/">
       
+      
+        <link rel="prev" href="../jetmetuncertain/">
+      
+      
+        <link rel="next" href="../../pileupuncertain/">
+      
       <link rel="icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
@@ -21,33 +27,32 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a6bdf11c.min.css">
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font:"Lato";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -58,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -80,7 +85,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../../.." title="CMS Open Data Guide" class="md-header__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
       
@@ -88,7 +95,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,10 +114,12 @@
       </div>
     </div>
     
+      
+    
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -118,13 +127,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -135,7 +144,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -144,10 +153,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/cernopendata/cms-opendata-guide/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/cernopendata/cms-opendata-guide" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     cms-opendata-guide
@@ -188,10 +197,10 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/cernopendata/cms-opendata-guide/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/cernopendata/cms-opendata-guide" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     cms-opendata-guide
@@ -227,20 +236,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
-          Computing Tools
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          CMS Open Data
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Computing Tools" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Computing Tools
+          CMS Open Data
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -250,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tools/cernportal/" class="md-nav__link">
+      <a href="../../../../cmsOpenData/cernportal/" class="md-nav__link">
         CERN Open Data Portal
       </a>
     </li>
@@ -264,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tools/cmsopendata/" class="md-nav__link">
+      <a href="../../../../cmsOpenData/cmsopendata/" class="md-nav__link">
         CMS Open Data
       </a>
     </li>
@@ -278,13 +288,62 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tools/cmstwiki/" class="md-nav__link">
-        CMS Twiki
+      <a href="../../../../cmsOpenData/findingData/" class="md-nav__link">
+        Finding Data
       </a>
     </li>
   
 
             
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmsOpenData/workshops/" class="md-nav__link">
+        Workshops
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Computing Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computing Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -387,18 +446,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           CMSSW
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CMSSW" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           CMSSW
         </label>
@@ -493,18 +553,19 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Analysis
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Analysis" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Analysis
         </label>
@@ -519,18 +580,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_1">
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
           Data and Simulation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Data and Simulation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
           Data and Simulation
         </label>
@@ -594,22 +656,37 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           Selection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Selection" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Selection
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../selection/validatedRuns/" class="md-nav__link">
+        Validated Runs
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -630,40 +707,41 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../selection/objects/" class="md-nav__link">
-        Physics Objects
-      </a>
-    </li>
-  
-
-            
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          Physics Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physics Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_2_3">
-          Specific Physics Objects
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Specific Physics Objects" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          Specific Physics Objects
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../../selection/objects/objects/" class="md-nav__link">
+        Physics Objects
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -699,8 +777,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../selection/objects/egamma/" class="md-nav__link">
-        Electrons and Photons
+      <a href="../../../selection/objects/electrons/" class="md-nav__link">
+        Electrons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../selection/objects/photons/" class="md-nav__link">
+        Photons
       </a>
     </li>
   
@@ -735,22 +827,22 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
             
               
   
   
   
     <li class="md-nav__item">
-      <a href="../../../selection/objectid/" class="md-nav__link">
-        Physics Object ID
+      <a href="../../../selection/objects/taus/" class="md-nav__link">
+        Taus
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -765,18 +857,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" type="checkbox" id="__nav_4_2_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5">
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
           ID Efficiency study
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="ID Efficiency study" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
           <span class="md-nav__icon md-icon"></span>
           ID Efficiency study
         </label>
@@ -819,50 +912,23 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_3" type="checkbox" id="__nav_4_2_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5_3">
+        <label class="md-nav__link" for="__nav_5_2_4_3" id="__nav_5_2_4_3_label" tabindex="0">
           Tutorial
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Tutorial" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_3">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_3">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../selection/idefficiencystudy/tutorial/01-introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../selection/idefficiencystudy/tutorial/02-fitting/" class="md-nav__link">
-        Fitting
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -906,6 +972,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../selection/idefficiencystudy/tutorial/06-Z-systematic/" class="md-nav__link">
+        Z-Systematic
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -922,18 +1002,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_4" type="checkbox" id="__nav_4_2_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5_4">
+        <label class="md-nav__link" for="__nav_5_2_4_4" id="__nav_5_2_4_4_label" tabindex="0">
           Reference Guide (SB)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Reference Guide (SB)" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_4">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_4">
           <span class="md-nav__icon md-icon"></span>
           Reference Guide (SB)
         </label>
@@ -1081,18 +1162,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5_5" type="checkbox" id="__nav_4_2_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2_5_5">
+        <label class="md-nav__link" for="__nav_5_2_4_5" id="__nav_5_2_4_5_label" tabindex="0">
           Reference Guide (Fit)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Reference Guide (Fit)" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_5_5">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_5">
           <span class="md-nav__icon md-icon"></span>
           Reference Guide (Fit)
         </label>
@@ -1156,18 +1238,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Luminosity
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Luminosity" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Luminosity
         </label>
@@ -1203,18 +1286,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Backgrounds
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Backgrounds" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Backgrounds
         </label>
@@ -1266,18 +1350,19 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           Systematics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Systematics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           Systematics
         </label>
@@ -1322,18 +1407,19 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_3" type="checkbox" id="__nav_4_5_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5_3">
+        <label class="md-nav__link" for="__nav_5_5_3" id="__nav_5_5_3_label" tabindex="0">
           Physics Object Uncertainty
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Physics Object Uncertainty" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_5_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_5_3">
           <span class="md-nav__icon md-icon"></span>
           Physics Object Uncertainty
         </label>
@@ -1376,7 +1462,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1553,18 +1639,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
           Interpretation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Interpretation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           Interpretation
         </label>
@@ -1776,13 +1863,14 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-<a href="https://github.com/cernopendata/cms-opendata-guide/edit/master/docs/analysis/systematics/objectsuncertain/btaguncertain.md" title="Edit this page" class="md-content__button md-icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-</a>
+                  
+
+  
+  
 
 
 <h1 id="b-tag-uncertainty">B Tag Uncertainty<a class="headerlink" href="#b-tag-uncertainty" title="Permanent link">&para;</a></h1>
@@ -1797,29 +1885,29 @@
 <h3 id="applying-scale-factors">Applying Scale Factors<a class="headerlink" href="#applying-scale-factors" title="Permanent link">&para;</a></h3>
 <h4 id="calculating-efficiencies">Calculating Efficiencies<a class="headerlink" href="#calculating-efficiencies" title="Permanent link">&para;</a></h4>
 <p>The <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/tree/master/BTagging">BTagging folder</a> of PhysObjectExtractorTool (<a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool">POET</a>) is used for calculating the efficiency for tagging each flavor of jet as a b quark, as a function of the jet momentum with the file <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/BTagging/src/WeightAnalyzerBEff.cc">WeightAnalyzer.cc</a>. The purpose of this file is to set up jet momentum histograms for numerators and denominators of efficiency histograms as defined above. The code loops through the jets, checks their flavor, checks their btagging discriminator to see if it passes tight, medium and or loose cut, and then fills the histograms according to that information.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">bDiscriminator</span><span class="p">(</span><span class="n">discriminatorStr</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hadronFlavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">partonFlavour</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">bDiscriminator</span><span class="p">(</span><span class="n">discriminatorStr</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hadronFlavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">partonFlavour</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavor</span><span class="p">)</span><span class="o">==</span><span class="mi">5</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavor</span><span class="p">)</span><span class="o">==</span><span class="mi">5</span><span class="w"> </span><span class="p">){</span>
 <span class="w">      </span><span class="n">BEff_Dptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span><span class="w">      </span>
-<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">discriminatorValueT</span><span class="p">)</span><span class="w"> </span><span class="n">BEffTight_Nptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">discriminatorValueM</span><span class="p">)</span><span class="w"> </span><span class="n">BEffMed_Nptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">discriminatorValueL</span><span class="p">)</span><span class="w"> </span><span class="n">BEffLoose_Nptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavor</span><span class="p">)</span><span class="o">==</span><span class="mi">4</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
-<span class="w">      </span><span class="p">...</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">discriminatorValueT</span><span class="p">)</span><span class="w"> </span><span class="n">BEffTight_Nptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">discriminatorValueM</span><span class="p">)</span><span class="w"> </span><span class="n">BEffMed_Nptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">disc</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">discriminatorValueL</span><span class="p">)</span><span class="w"> </span><span class="n">BEffLoose_Nptbins_b</span><span class="o">-&gt;</span><span class="n">Fill</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span><span class="n">weight</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavor</span><span class="p">)</span><span class="o">==</span><span class="mi">4</span><span class="w"> </span><span class="p">){</span>
+<span class="w">      </span><span class="p">...</span>
 </code></pre></div>
 <p>These historgrams are then stored in an output file.</p>
 <p>Input, output, and other parameters can be changed in the <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/BTagging/python/befficiency_patjets_cfg.py">config file</a>.</p>
 <p>After this, you can save, exit, and compile, and then move onto the <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/BTagging/python/befficiency_patjets_cfg.py">config file</a>. You will put the file(s) which you wish to run efficiencies on here:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">##### ------- This is a test file</span>
-<span class="n">process</span><span class="p">.</span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cms</span><span class="p">.</span><span class="n">Source</span><span class="p">(</span><span class="s">&quot;PoolSource&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">fileNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cms</span><span class="p">.</span><span class="n">untracked</span><span class="p">.</span><span class="n">vstring</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="err">&#39;</span><span class="nl">root</span><span class="p">:</span><span class="c1">//eospublic.cern.ch//eos/opendata/cms/MonteCarlo2012/Summer12_DR53X/TTbar_8TeV-Madspin_aMCatNLO-herwig/AODSIM/PU_S10_START53_V19-v2/00000/04FCA1D5-E74C-E311-92CE-002590A887F0.root&#39;))</span>
+<span class="n">process</span><span class="p">.</span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cms</span><span class="p">.</span><span class="n">Source</span><span class="p">(</span><span class="s">&quot;PoolSource&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">fileNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cms</span><span class="p">.</span><span class="n">untracked</span><span class="p">.</span><span class="n">vstring</span><span class="p">(</span>
+<span class="w">        </span><span class="err">&#39;</span><span class="n">root</span><span class="o">:</span><span class="c1">//eospublic.cern.ch//eos/opendata/cms/MonteCarlo2012/Summer12_DR53X/TTbar_8TeV-Madspin_aMCatNLO-herwig/AODSIM/PU_S10_START53_V19-v2/00000/04FCA1D5-E74C-E311-92CE-002590A887F0.root&#39;))</span>
 </code></pre></div>
 <p>Once this is complete, you can run the <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/BTagging/python/befficiency_patjets_cfg.py">config file</a> for your efficiencies.</p>
 <h4 id="run-complete">Run Complete<a class="headerlink" href="#run-complete" title="Permanent link">&para;</a></h4>
 <p>Once your run is complete, in the 'BTagging' folder there should be a file called <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/BTagging/plotBeff.C">plotBeff.C</a>. This file is set up to do the numerator and denomenator divisions (as defined earlier), show you a histogram of your efficiencies from those calculations, and write the same efficiencies that you calculated in a numerical form. To run this code open this file in root like such:</p>
-<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="n">plotBeff</span><span class="p">.</span><span class="n">c</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="n">plotBeff</span><span class="p">.</span><span class="n">c</span>
 </code></pre></div>
 <p>The histogram and output should appear through root. An example of what the histogram should look like is this:</p>
 <p><img alt="Output Histogram" src="../../../../images/c1.png" /></p>
@@ -1828,14 +1916,14 @@
 <p><sub> In <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/BTagging/src/WeightAnalyzerBEff.cc">WeightAnalyzer.cc</a>, there is a spot to input custom jet momentum bins that looks like this: </sub></p>
 <!-- markdownlint-restore -->
 
-<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">ptbinsB</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">ptbinsB</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">};</span>
 </code></pre></div>
 <!-- markdownlint-disable -->
 <p><sub> where a bin's momentums span from 0 to 15, 15 to 30, etc. </sub></p>
 <p><sub> After your jet momentum bin update, you need to update the actual code that produces the histogram. Continuing this example, there are a total of 9 momentum bins from the numbers given in, ptbinsB. In the histogram producing code, there is a 9 indicating the number of bins: </sub></p>
 <!-- markdownlint-restore -->
 
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">BEff_Dptbins_b</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">-&gt;</span><span class="n">make</span><span class="o">&lt;</span><span class="n">TH1D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;BEff_Dptbins_b   &quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">ptbinsB</span><span class="p">);</span><span class="w"> </span><span class="n">BEff_Dptbins_b</span><span class="o">-&gt;</span><span class="n">Sumw2</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">BEff_Dptbins_b</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">-&gt;</span><span class="n">make</span><span class="o">&lt;</span><span class="n">TH1D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;BEff_Dptbins_b   &quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">ptbinsB</span><span class="p">);</span><span class="w"> </span><span class="n">BEff_Dptbins_b</span><span class="o">-&gt;</span><span class="n">Sumw2</span><span class="p">();</span>
 </code></pre></div>
 <!-- markdownlint-disable -->
 <p><sub> Where the number 9 is now, this number will need to be updated to your number of bins. </sub></p>
@@ -1843,18 +1931,18 @@
 
 <h4 id="access-efficiencies">Access Efficiencies<a class="headerlink" href="#access-efficiencies" title="Permanent link">&para;</a></h4>
 <p>Once you have your efficiencies, you can then put them in to the <a href="https://github.com/cms-legacydata-analyses/PhysObjectExtractorTool/blob/master/PhysObjectExtractor/src/PatJetAnalyzer.cc#L199-L242">3 look up functions</a> that have been implemented in PatJetAnalyzer for storing efficiencies. Here, for example, is the b tag efficiencies function which returns efficiency given a jet momentum:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"></span>
-<span class="nf">PatJetAnalyzer::getBtagEfficiency</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">){</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.263407</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.548796</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.656801</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.689167</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">125</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.697911</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">150</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.700187</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.679236</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.625296</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.394916</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span>
+<span class="nf">PatJetAnalyzer::getBtagEfficiency</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">){</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.263407</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.548796</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.656801</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.689167</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">125</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.697911</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">150</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.700187</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.679236</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.625296</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.394916</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h4 id="access-scale-factors">Access Scale Factors<a class="headerlink" href="#access-scale-factors" title="Permanent link">&para;</a></h4>
 <p><a href="https://twiki.cern.ch/twiki/pub/CMSPublic/BtagRecommendation2011OpenData/CSV.csv">The data file</a> provided by the CMS b tagging group contains the scale factor functions for all types of jets. Some important titles to give more context to are as follows:</p>
@@ -1865,47 +1953,47 @@
 </ul>
 <p>Sorting Columns and creating filters with the .csv file can make accessing and finding sepcific scale factor equations easier. For example, filtering the OperatingPoint column to only show the number 1 will give you only medium cut jet information. Other useful information about the .csv file can be found <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/BTagCalibration">here</a>.</p>
 <p>The scale factor equations from the folumla column have been implemented in POET! In PatJetAnalyzer there are 2 functions, one for b and c flavored jets and one for light flavored jets, that return the scale factor of the jet depending on the momentum of the jet. Below is the b and c tag function.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"></span>
-<span class="nf">PatJetAnalyzer::getBorCtagSF</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">eta</span><span class="p">){</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">670.</span><span class="p">)</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">670</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">eta</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">pt</span><span class="o">&lt;</span><span class="mf">20.</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span>
+<span class="nf">PatJetAnalyzer::getBorCtagSF</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">eta</span><span class="p">){</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">670.</span><span class="p">)</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">670</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">eta</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">pt</span><span class="o">&lt;</span><span class="mf">20.</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">0.92955</span><span class="o">*</span><span class="p">((</span><span class="mf">1.</span><span class="o">+</span><span class="p">(</span><span class="mf">0.0589629</span><span class="o">*</span><span class="n">pt</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="p">(</span><span class="mf">0.0568063</span><span class="o">*</span><span class="n">pt</span><span class="p">)));</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">0.92955</span><span class="o">*</span><span class="p">((</span><span class="mf">1.</span><span class="o">+</span><span class="p">(</span><span class="mf">0.0589629</span><span class="o">*</span><span class="n">pt</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="p">(</span><span class="mf">0.0568063</span><span class="o">*</span><span class="n">pt</span><span class="p">)));</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>Look at this twiki for <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/BtagRecommendation2011OpenData#Data_MC_Scale_Factors">additional information about scale factors</a>.</p>
 <h3 id="calculating-weights">Calculating Weights<a class="headerlink" href="#calculating-weights" title="Permanent link">&para;</a></h3>
 <p>Once these functions are updated to their desired states, weight calculating can happen! The first thing to check for when event weight calculating is this:
 <code>if (jet_btag.at(value_jet_n) &gt; 0.679)</code>. This check is to see whether or not the jet distminator makes the cut we want our jets to make. In this case, we want our jets to make the medium cut (.679). If a jet makes the cut, there are then a couple more checks to be made:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavour</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span><span class="w"></span>
-<span class="w">   </span><span class="n">eff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBtagEfficiency</span><span class="p">(</span><span class="n">corrpt</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBorCtagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span><span class="w"></span>
-<span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span><span class="w"></span>
-<span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavour</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">){</span><span class="w"></span>
-<span class="w"> </span><span class="n">eff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getCtagEfficiency</span><span class="p">(</span><span class="n">corrpt</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBorCtagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span><span class="w"></span>
-<span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span><span class="w"></span>
-<span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w"> </span><span class="n">eff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getLFtagEfficiency</span><span class="p">(</span><span class="n">corrpt</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getLFtagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span><span class="w"></span>
-<span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">uncertaintyForLFTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span><span class="w"></span>
-<span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">uncertaintyForLFTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavour</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span>
+<span class="w">   </span><span class="n">eff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBtagEfficiency</span><span class="p">(</span><span class="n">corrpt</span><span class="p">);</span>
+<span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBorCtagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span>
+<span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span>
+<span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">hadronFlavour</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">){</span>
+<span class="w"> </span><span class="n">eff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getCtagEfficiency</span><span class="p">(</span><span class="n">corrpt</span><span class="p">);</span>
+<span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBorCtagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span>
+<span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span>
+<span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">uncertaintyForBTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="n">eff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getLFtagEfficiency</span><span class="p">(</span><span class="n">corrpt</span><span class="p">);</span>
+<span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getLFtagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">));</span>
+<span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">uncertaintyForLFTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span>
+<span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">uncertaintyForLFTagSF</span><span class="p">(</span><span class="n">corrpt</span><span class="p">,</span><span class="w"> </span><span class="n">jet_eta</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">value_jet_n</span><span class="p">)));</span>
+<span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <p>This section first finds which flavor of jet it is (b = 5, c = 4, and light = anything else) and then gets the efficiency for the respected jet, as well as calculates its scale factor. It also calculates its up and down quarked scale factors of the jet. Once these checks and calculations are complete, the following calulations can occur:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">MC</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span><span class="w"></span>
-<span class="w"> </span><span class="n">btagWeight</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span><span class="w"></span>
-<span class="w"> </span><span class="n">btagWeightUp</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span><span class="w"></span>
-<span class="w"> </span><span class="n">btagWeightDn</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">MC</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span>
+<span class="w"> </span><span class="n">btagWeight</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">SF</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span>
+<span class="w"> </span><span class="n">btagWeightUp</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">SFu</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span>
+<span class="w"> </span><span class="n">btagWeightDn</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">SFd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff</span><span class="p">;</span>
 </code></pre></div>
 <p>These calculations are the probability of a given configuration of jets in MC simulation (<code>MC</code>) and data (<code>btagWeight</code>, <code>btagWeightUp</code>, and <code>btagWeightDn</code>).
 The same process with a little bit different probability calculating is done if the jet did not meet the desired cut.</p>
 <p>Once these checks have finished for every jet you are looking at, a final calculation for the event weights is done.</p>
-<div class="highlight"><pre><span></span><code><span class="n">btagWeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">btagWeight</span><span class="o">/</span><span class="n">MC</span><span class="p">);</span><span class="w"></span>
-<span class="n">btagWeightUp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">btagWeightUp</span><span class="o">/</span><span class="n">MC</span><span class="p">);</span><span class="w"></span>
-<span class="n">btagWeightDn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">btagWeightDn</span><span class="o">/</span><span class="n">MC</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">btagWeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">btagWeight</span><span class="o">/</span><span class="n">MC</span><span class="p">);</span>
+<span class="n">btagWeightUp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">btagWeightUp</span><span class="o">/</span><span class="n">MC</span><span class="p">);</span>
+<span class="n">btagWeightDn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">btagWeightDn</span><span class="o">/</span><span class="n">MC</span><span class="p">);</span>
 </code></pre></div>
 <p>NOTE: There are many ways to go about calculating event weights. This <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/BtagRecommendation2011OpenData#Methods_to_Apply_b_Tagging_Effic">link</a> shows a couple of the different ways. In POET, method 1a is the method used.</p>
 <h3 id="uncertainties">Uncertainties<a class="headerlink" href="#uncertainties" title="Permanent link">&para;</a></h3>
@@ -1913,25 +2001,25 @@ The same process with a little bit different probability calculating is done if 
 <h4 id="uncertainties-for-each-flavor">Uncertainties for Each Flavor<a class="headerlink" href="#uncertainties-for-each-flavor" title="Permanent link">&para;</a></h4>
 <p>In POET, there are 2 functions for the uncertainty, one for the b tag uncertainty and one for the light flavor tag uncertainty. The reason that there is not one specifically for c tagged jets is because c tagged jet's uncertainty is two times that of the b tagged jet's uncertainty, so you can simply multiply the b tag uncertainty call by two, as seen here: <code>SFu = SF + (2 * uncertaintyForBTagSF(corrpt, jet_eta.at(value_jet_n)));</code></p>
 <p>Here is what the b tag uncertainty function looks like, which returns the uncertainty given a jet momentum:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"></span>
-<span class="nf">PatJetAnalyzer::uncertaintyForBTagSF</span><span class="p">(</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">eta</span><span class="p">){</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">eta</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">pt</span><span class="o">&lt;</span><span class="mf">20.</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0466655</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0203547</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0187707</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0250719</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.023081</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0183273</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0256502</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">120</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0189555</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">160</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0236561</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">210</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0307624</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">260</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0387889</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">320</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0443912</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0693573</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0650147</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.066886</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span>
+<span class="nf">PatJetAnalyzer::uncertaintyForBTagSF</span><span class="p">(</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">eta</span><span class="p">){</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">eta</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">pt</span><span class="o">&lt;</span><span class="mf">20.</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0466655</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0203547</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0187707</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0250719</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.023081</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0183273</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0256502</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">120</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0189555</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">160</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0236561</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">210</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0307624</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">260</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0387889</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">320</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0443912</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0693573</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0650147</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.066886</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h4 id="storing-final-weights">Storing Final Weights<a class="headerlink" href="#storing-final-weights" title="Permanent link">&para;</a></h4>
 <p>Also from the "Calculating Weights" section, there are 3 final variables that are used to store the final event weights that were calculated:
@@ -1942,49 +2030,20 @@ The same process with a little bit different probability calculating is done if 
 <p>This page is under construction</p>
 </div>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../jetmetuncertain/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Jet/MET uncertainties" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Jet/MET uncertainties
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../pileupuncertain/" class="md-footer__link md-footer__link--next" aria-label="Next: Pileup Uncertainty" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Pileup Uncertainty
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2006,10 +2065,11 @@ The same process with a little bit different probability calculating is done if 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   </body>

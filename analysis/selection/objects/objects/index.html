@@ -1,0 +1,1913 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CMS Open Data Guide">
+      
+      
+      
+        <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/analysis/selection/objects/objects/">
+      
+      
+        <link rel="prev" href="../../triggers/">
+      
+      
+        <link rel="next" href="../tools/">
+      
+      <link rel="icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>Physics Objects - CMS Open Data Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#physics-objects" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CMS Open Data Guide" class="md-header__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
+      
+  <img src="../../../../images/cmslogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMS Open Data Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Physics Objects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cernopendata/cms-opendata-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cms-opendata-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CMS Open Data Guide" class="md-nav__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
+      
+  <img src="../../../../images/cmslogo.png" alt="logo">
+
+    </a>
+    CMS Open Data Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cernopendata/cms-opendata-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cms-opendata-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          CMS Open Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CMS Open Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmsOpenData/cernportal/" class="md-nav__link">
+        CERN Open Data Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmsOpenData/cmsopendata/" class="md-nav__link">
+        CMS Open Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmsOpenData/findingData/" class="md-nav__link">
+        Finding Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmsOpenData/workshops/" class="md-nav__link">
+        Workshops
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Computing Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computing Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/unix/" class="md-nav__link">
+        UNIX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/root/" class="md-nav__link">
+        ROOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/cppandpython/" class="md-nav__link">
+        C++ and Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/virtualmachines/" class="md-nav__link">
+        Virtual Machines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CMSSW
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CMSSW
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmssw/cmsswoverview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmssw/cmsswdatamodel/" class="md-nav__link">
+        Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmssw/cmsswanalyzers/" class="md-nav__link">
+        Analyzers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmssw/cmsswconfigure/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cmssw/cmsswconditions/" class="md-nav__link">
+        Conditions Data
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Data and Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data and Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasim/collisiondata/" class="md-nav__link">
+        Collision Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasim/mcsimulations/" class="md-nav__link">
+        MC Simulations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasim/eventgeneration/" class="md-nav__link">
+        Event Generation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Selection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Selection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../validatedRuns/" class="md-nav__link">
+        Validated Runs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../triggers/" class="md-nav__link">
+        Triggers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          Physics Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physics Objects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Physics Objects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Physics Objects
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataformats" class="md-nav__link">
+    DataFormats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-methods" class="md-nav__link">
+    Access methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detector-information-for-identification" class="md-nav__link">
+    Detector information for identification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    Additional information
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        Common Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../muons/" class="md-nav__link">
+        Muons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../electrons/" class="md-nav__link">
+        Electrons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../photons/" class="md-nav__link">
+        Photons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jets/" class="md-nav__link">
+        Jets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../met/" class="md-nav__link">
+        Missing ET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taus/" class="md-nav__link">
+        Taus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+          ID Efficiency study
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          ID Efficiency study
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/tagandprobe/" class="md-nav__link">
+        Tag and Probe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/signalextraction/" class="md-nav__link">
+        Signal extraction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4_3" id="__nav_5_2_4_3_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/tutorial/03-sidebandsubtraction/" class="md-nav__link">
+        Sideband Subtraction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/tutorial/04-comparison/" class="md-nav__link">
+        Comparison
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/tutorial/05-systematic/" class="md-nav__link">
+        Systematic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/tutorial/06-Z-systematic/" class="md-nav__link">
+        Z-Systematic
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4_4" id="__nav_5_2_4_4_label" tabindex="0">
+          Reference Guide (SB)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference Guide (SB)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/macro/" class="md-nav__link">
+        The Macro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/FitFunctions/" class="md-nav__link">
+        FitFunction class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/SidebandSubtraction/" class="md-nav__link">
+        SidebandSubtraction class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/InvariantMass/" class="md-nav__link">
+        InvariantMass class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/MassValues/" class="md-nav__link">
+        MassValues struct
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/Type/" class="md-nav__link">
+        Type class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/TagProbe/" class="md-nav__link">
+        TagProbe class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/PtEtaPhi/" class="md-nav__link">
+        PtEtaPhi class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/sidebandreferenceguide/PassingFailing/" class="md-nav__link">
+        PassingFailing class
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4_5" id="__nav_5_2_4_5_label" tabindex="0">
+          Reference Guide (Fit)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Reference Guide (Fit)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/fittingreferenceguide/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idefficiencystudy/fittingreferenceguide/src_files/" class="md-nav__link">
+        Src files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Luminosity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Luminosity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../luminosity/lumi/" class="md-nav__link">
+        Luminosity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Backgrounds
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Backgrounds
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backgrounds/techniques/" class="md-nav__link">
+        Techniques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backgrounds/qcdestimation/" class="md-nav__link">
+        QCD Estimation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Systematics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Systematics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systematics/lumiuncertain/" class="md-nav__link">
+        Luminosity Uncertainties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systematics/mcuncertain/" class="md-nav__link">
+        MC Uncertainty
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_3" id="__nav_5_5_3_label" tabindex="0">
+          Physics Object Uncertainty
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physics Object Uncertainty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systematics/objectsuncertain/leptonuncertain/" class="md-nav__link">
+        Lepton/Photon uncertainties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systematics/objectsuncertain/jetmetuncertain/" class="md-nav__link">
+        Jet/MET uncertainties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systematics/objectsuncertain/btaguncertain/" class="md-nav__link">
+        Tagging uncertainties
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systematics/pileupuncertain/" class="md-nav__link">
+        Pileup Uncertainty
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+          Interpretation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Interpretation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interpretation/stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interpretation/limits/" class="md-nav__link">
+        Upper-limit Calculations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataformats" class="md-nav__link">
+    DataFormats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-methods" class="md-nav__link">
+    Access methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detector-information-for-identification" class="md-nav__link">
+    Detector information for identification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    Additional information
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="physics-objects">Physics Objects<a class="headerlink" href="#physics-objects" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>The CMS is a giant detector that acts like a camera that "photographs" particle collisions, allowing us to interpret their nature.</p>
+<p>Certainly we cannot directly observe all the particles created in the collisions because some of them decay very quickly or simply do not interact with our detector.  However, we can infer their presence.  If they decay to other stable particles and interact with the apparatus, they leave signals in the CMS subdetectors. These signals are used to <em>reconstruct</em> the decay products or infer their presence; we call these <strong>physics objects</strong>. These objects could be electrons, muons, jets, missing energy, etc., but also lower level objects like tracks.  For the current releases of open data, we store them in ROOT files following the EDM data model in AOD format.</p>
+<p>In the CERN Open Portal site one can find a description of these physical objects and a list of them corresponding to <a href="http://opendata.cern.ch/docs/cms-physics-objects-2010">2010</a> and <a href="http://opendata.cern.ch/docs/cms-physics-objects-2011">2011/2012</a> releases of open data. For Run 1 data, this guide has the most uptodate content with the corresponding code snippets. For Run 2 data from 2015, a detailed <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2015#High_level_physics_objects">listing</a> is available in the CMS WorkBook.</p>
+<p>The code examples to which this guide mainly refers to are:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Run 1 Data</label><label for="__tabbed_1_2">Run 2 Data</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/tree/2012">Physics Objects Extractor Tool (POET)</a>: shows how to extract physics (objects) information and gives examples of methods or tools needed for processing them. For the sake of clarity, <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/tree/2012/PhysObjectExtractor/src">EDAnalyzer modules</a> are provided separately for each object.</li>
+<li><a href="https://github.com/cms-opendata-analyses/AOD2NanoAODOutreachTool/tree/2012">AOD2NanoAODOutreachTool</a>: reads events from CMS AOD files and convert them to a reduced data format. This example provides a single <a href="https://github.com/cms-opendata-analyses/AOD2NanoAODOutreachTool/blob/2012/src/AOD2NanoAOD.cc">EdAnalyzer module</a> handling all types of physics objects.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/tree/2015MiniAOD">Physics Objects Extractor Tool (POET)</a>: shows how to extract physics (objects) information and gives examples of methods or tools needed for processing them. For the sake of clarity, <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/tree/2015MiniAOD/PhysObjectExtractor/src">EDAnalyzer modules</a> are provided separately for each object.</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="dataformats">DataFormats<a class="headerlink" href="#dataformats" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Run 1 Data</label><label for="__tabbed_2_2">Run 2 Data</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The physical objects are usually stored in specific <em>collections</em>.  For instance, <a href="http://opendata.cern.ch/docs/cms-physics-objects-2011#muons">muons</a> are most commonly obtained from the <code>reco::Muon</code> collection.  The <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAodDataTable">AOD Data Format Table</a> gives a good description of the different collections (or data formats) for the AOD tier.  Unfortunately, the links for the <em>containers</em> column got broken after CMSSW was moved to Github.  Those links would have pointed us to the corresponding CMSSW C++ classes associated with those containers.  This is important because one needs to know which CMSSW class matches a given collection of objects to include the headers of those classes in the header of your analyzer code.  But let that not let us down.</p>
+<p><img alt="DataFormats" src="../../../../images/collections.png" /></p>
+<p>Fortunately, the names of the collections <em>containers</em> actually match the name of its associated CMSSW classes.  These classes (data format classes) live under the <a href="https://github.com/cms-sw/cmssw/tree/master/DataFormats">DataFormats</a> directory in CMSSW.  If we browse through, we find the <code>MuonReco</code> package.   In its <code>interface</code> area we find the <a href="https://github.com/cms-sw/cmssw/blob/master/DataFormats/MuonReco/interface/Muon.h">DataFormats/MuonReco/interface/Muon.h</a> class header, which is the one we would need to incorporate in our analyzer.  This is corroborated by this <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMuonAnalysis#Available_information">Muon Analysis Twiki section</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Remember</p>
+<p>When accessing a specific piece of code in the CMSSW github repository, and want to explore its methods, variables, etc., make sure you select the right git branch.  E.g., <a href="https://github.com/cms-sw/cmssw/blob/CMSSW_5_3_X/DataFormats/MuonReco/interface/Muon.h">CMSSW_5_3_X</a> for 2011/2012 open data.</p>
+</div>
+<p>In addition to this base class, sometimes it is necessary to invoke other auxiliary classes.  For instance, <a href="https://github.com/cms-sw/cmssw/blob/master/DataFormats/MuonReco/interface/MuonFwd.h">DataFormats/MuonReco/interface/MuonFwd.h</a>, which can be found in the same interface area.</p>
+<p>So, in the context of this example, in order to support muons information, at the top of your <a href="../../../../cmssw/cmsswanalyzers/">EDAnalyzer</a> you should include the following lines:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//classes to extract Muon information</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DataFormats/MuonReco/interface/Muon.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DataFormats/MuonReco/interface/MuonFwd.h&quot;</span>
+</code></pre></div>
+<p>See an example of an EDAnalyzer accessing muon information in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2012/PhysObjectExtractor/src/MuonAnalyzer.cc">MuonAnalyzer</a> of the Physics Object Extractor Tool (POET).</p>
+</div>
+<div class="tabbed-block">
+<p>The physical objects are usually stored in specific <em>collections</em>.  For instance,  muons are obtained from the C++ class <code>std::vector&lt;pat::Muon&gt;</code> where <code>pat</code> stands for "Physics analysis tools" and is a namespace for miniAOD object classes. The collection is often called <code>pat::MuonCollection</code> using its definition in <a href="https://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_7_6_7/doc/html/dc/d3b/DataFormats_2PatCandidates_2interface_2Muon_8h_source.html">the muon class</a>). The <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2015#High_level_physics_objects">MINIAOD physics objects table</a> gives a good description of the different collections (or data formats) for the MINIAOD tier. This is the muon entry in that table:</p>
+<p><img alt="DataFormats" src="../../../../images/miniaodtable1.png" /></p>
+<p>The MINIAOD data format classes live under the <a href="https://github.com/cms-sw/cmssw/tree/CMSSW_7_6_X/DataFormats/PatCandidates/interface">DataFormats/PatCandidates/interface</a> directory in CMSSW. Here we find the <a href="https://github.com/cms-sw/cmssw/blob/CMSSW_7_6_X/PatCandidates/interface/Muon.h">DataFormats/PatCandidates/interface/Muon.h</a> class header, which is the one we would need to incorporate in our analyzer. The other possible collection</p>
+<p>So, in the context of this example, in order to support muons information, at the top of your <a href="../../../../cmssw/cmsswanalyzers/">EDAnalyzer</a> you should include the following line:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//classes to extract Muon information</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DataFormats/MuonReco/interface/Muon.h&quot;</span>
+</code></pre></div>
+<p>See an example of an EDAnalyzer accessing muon information in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2015MiniAOD/PhysObjectExtractor/src/MuonAnalyzer.cc">MuonAnalyzer</a> of the Physics Object Extractor Tool (POET). The definitions of object classes used in miniAOD data format can be found in the <a href="https://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_7_6_7/doc/html/d8/d06/namespacepat.html#nested-classes">list of all classes</a> of the <code>pat</code> namespace.</p>
+</div>
+</div>
+</div>
+<h2 id="access-methods">Access methods<a class="headerlink" href="#access-methods" title="Permanent link">&para;</a></h2>
+<p>In the <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideEDMGetDataFromEvent#Event_methods_for_data_access">Event methods for data access</a> section of the <em>Getting Data From an Event</em> Twiki page, one can find a complete description of the different methods available for <em>Event</em> data access.</p>
+<div class="admonition note">
+<p class="admonition-title">Remember</p>
+<p>When accessing the CMS twiki pages we will usually point you to the most recent page.  However, historical Twiki documentation, i.e., earlier revision of the pages, may provide more accurate information for open data that is already a few years old. One can access this historical archive by going to the bottom of any Twiki page, clicking on <strong>History</strong> and exploring the revisions closer to the open data release year.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Run 1 Data</label><label for="__tabbed_3_2">Run 2 Data</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>As indicated in that page, all Event data access methods use the <code>edm::Handle&lt;T&gt;</code>, where <code>T</code> is the C++ type of the requested object, to hold the result of an access.  As an example, during Run 1, the recommended method was the <code>getByLabel</code> one.  This method needed an <code>InputTag</code>.  This can also be extracted from the <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAodDataTable">AOD Data Format Table</a>.  The first column indicate the InputTag:</p>
+<p><img alt="InputTags" src="../../../../images/inputtags.png" /></p>
+<p>Therefore, when accessing muon information, in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2012/PhysObjectExtractor/src/MuonAnalyzer.cc#L155"><code>analyze</code> method</a> of the EDAnalyzer would include the following lines:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Handle</span><span class="o">&lt;</span><span class="n">reco</span><span class="o">::</span><span class="n">MuonCollection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mymuons</span><span class="p">;</span>
+<span class="n">iEvent</span><span class="p">.</span><span class="n">getByLabel</span><span class="p">(</span><span class="s">&quot;muons&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mymuons</span><span class="p">);</span>
+</code></pre></div>
+<p>If you required <em>cosmic</em> muons, you would need instead:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Handle</span><span class="o">&lt;</span><span class="n">reco</span><span class="o">::</span><span class="n">MuonCollection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mymuons</span><span class="p">;</span>
+<span class="n">iEvent</span><span class="p">.</span><span class="n">getByLabel</span><span class="p">(</span><span class="s">&quot;muonsFromCosmics&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mymuons</span><span class="p">);</span>
+</code></pre></div>
+<p>Alternatively, as done in the POET MuonAnalyzer, it is also possible to retrieve the InputTag name from <a href="../../../../cmssw/cmsswconfigure/">configuration</a>.  In that case, the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2012/PhysObjectExtractor/python/poet_cfg.py#L112">configuration file</a> has:</p>
+<div class="highlight"><pre><span></span><code><span class="n">process</span><span class="o">.</span><span class="n">demo</span> <span class="o">=</span> <span class="n">cms</span><span class="o">.</span><span class="n">EDAnalyzer</span><span class="p">(</span><span class="s1">&#39;MuonAnalyzer&#39;</span><span class="p">,</span>
+                <span class="n">InputCollection</span> <span class="o">=</span> <span class="n">cms</span><span class="o">.</span><span class="n">InputTag</span><span class="p">(</span><span class="s2">&quot;muons&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>In this case, the appropriate input tag needs to be defined in the EDAnalyzer class as done in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2012/PhysObjectExtractor/src/MuonAnalyzer.cc#L53">MuonAnalyzer example class</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//declare the input tag for MuonCollection</span>
+<span class="w">    </span><span class="n">edm</span><span class="o">::</span><span class="n">InputTag</span><span class="w"> </span><span class="n">muonInput</span><span class="p">;</span>
+</code></pre></div>
+<p>It is extracted from the ParameterSet in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2012/PhysObjectExtractor/src/MuonAnalyzer.cc#L96">constructor</a></p>
+<div class="highlight"><pre><span></span><code><span class="n">MuonAnalyzer</span><span class="o">::</span><span class="n">MuonAnalyzer</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">edm</span><span class="o">::</span><span class="n">ParameterSet</span><span class="o">&amp;</span><span class="w"> </span><span class="n">iConfig</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="c1">//now do what ever initialization is needed</span>
+<span class="n">muonInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iConfig</span><span class="p">.</span><span class="n">getParameter</span><span class="o">&lt;</span><span class="n">edm</span><span class="o">::</span><span class="n">InputTag</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;InputCollection&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>and used in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2012/PhysObjectExtractor/src/MuonAnalyzer.cc#L160"><code>analyze</code> method</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Handle</span><span class="o">&lt;</span><span class="n">reco</span><span class="o">::</span><span class="n">MuonCollection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mymuons</span><span class="p">;</span>
+<span class="n">iEvent</span><span class="p">.</span><span class="n">getByLabel</span><span class="p">(</span><span class="n">muonInput</span><span class="p">,</span><span class="w"> </span><span class="n">mymuons</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>As indicated in that page, all Event data access methods use the <code>edm::Handle&lt;T&gt;</code>, where <code>T</code> is the C++ type of the requested object, to hold the result of an access.  For Run 2 data, the method is <code>getByToken</code>.  This method needs a "token" and an <code>InputTag</code>, which will pass the name of the collection to the analyzed. This name is indicated as "Label" <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2015#High_level_physics_objects">the MINIAOD table</a>, <code>slimmedMuons</code> for muons.</p>
+<p>The InputTag name is defined in the <a href="../../../../cmssw/cmsswconfigure/">configuration</a>. In that case, the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2015MiniAOD/PhysObjectExtractor/python/poet_cfg.py">configuration file</a> has:</p>
+<div class="highlight"><pre><span></span><code><span class="n">process</span><span class="o">.</span><span class="n">mymuons</span> <span class="o">=</span> <span class="n">cms</span><span class="o">.</span><span class="n">EDAnalyzer</span><span class="p">(</span><span class="s1">&#39;MuonAnalyzer&#39;</span><span class="p">,</span> 
+                <span class="n">muons</span> <span class="o">=</span> <span class="n">cms</span><span class="o">.</span><span class="n">InputTag</span><span class="p">(</span><span class="s2">&quot;slimmedMuons&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>The appropriate token in the EDAnalyzer class as done in the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/2015MiniAOD/PhysObjectExtractor/src/MuonAnalyzer.cc">MuonAnalyzer example class</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//declare the token for MuonCollection</span>
+<span class="w">  </span><span class="n">edm</span><span class="o">::</span><span class="n">EDGetTokenT</span><span class="o">&lt;</span><span class="n">pat</span><span class="o">::</span><span class="n">MuonCollection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">muonToken_</span><span class="p">;</span>
+</code></pre></div>
+<p>which is then passed with the Input Tag to the constructor of the EDAnalyzer class</p>
+<div class="highlight"><pre><span></span><code><span class="n">MuonAnalyzer</span><span class="o">::</span><span class="n">MuonAnalyzer</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">edm</span><span class="o">::</span><span class="n">ParameterSet</span><span class="o">&amp;</span><span class="w"> </span><span class="n">iConfig</span><span class="p">)</span><span class="o">:</span><span class="w"> </span>
+<span class="w">    </span><span class="n">muonToken_</span><span class="p">(</span><span class="n">consumes</span><span class="o">&lt;</span><span class="n">pat</span><span class="o">::</span><span class="n">MuonCollection</span><span class="o">&gt;</span><span class="p">(</span><span class="n">iConfig</span><span class="p">.</span><span class="n">getParameter</span><span class="o">&lt;</span><span class="n">edm</span><span class="o">::</span><span class="n">InputTag</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;muons&quot;</span><span class="p">)))</span>
+<span class="p">{</span>
+<span class="c1">//now do what ever initialization is needed</span>
+</code></pre></div>
+<p>and used in the <code>analyze</code> method:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Handle</span><span class="o">&lt;</span><span class="n">pat</span><span class="o">::</span><span class="n">MuonCollection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">muons</span><span class="p">;</span>
+<span class="n">iEvent</span><span class="p">.</span><span class="n">getByToken</span><span class="p">(</span><span class="n">muonToken_</span><span class="p">,</span><span class="w"> </span><span class="n">muons</span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="detector-information-for-identification">Detector information for identification<a class="headerlink" href="#detector-information-for-identification" title="Permanent link">&para;</a></h2>
+<p>The most signicant difference between a list of certain particles from a Monte Carlo generator and a list of the corresponding physics objects from CMS is likely the inherent uncertainty in the reconstruction. Selection of “a muon” or “an electron” for analysis requires algorithms designed to separate “real” objects from “fakes”. These are called <strong>identification</strong> algorithms, often abbreviated as ID.</p>
+<p><strong>Isolation</strong> algorithms are designed to measure the amount of energy deposited near the object, to determine if it was likely produced near the primary interaction (typically little nearby energy), or from the decay of a longer-lived particle (typically a lot of nearby energy). Many types of isolation algorithms exist to deal with unique physics cases.</p>
+<p>Isolation is computed in similar ways for all physics objects: search for particles in a cone around the object of interest and sum up their energies, subtracting off the energy deposited by pileup particles. This sum divided by the object of interest’s transverse momentum is called relative isolation and is the most common way to determine whether an object was produced “promptly” in or following the proton-proton collision (ex: electrons from a Z boson decay, or photons from a Higgs boson decay). Relative isolation values will tend to be large for particles that emerged from weak decays of hadrons within jets, or other similar “nonprompt” processes.</p>
+<p>Both types of algorithms function using working points that are described on a spectrum from “loose” to “tight”. Working points that are “looser” tend to have a high efficiency for accepting real objects, but perhaps a poor rejection rate for fake objects. Working points that are “tighter” tend to have lower efficiencies for accepting real objects, but much better rejection rates for fake objects. The choice of working point is highly analysis dependent. Some analyses value efficiency over background rejection, and some analyses are the opposite.</p>
+<p>The standard identification and isolation algorithm results can be accessed from the physics object classes.</p>
+<h2 id="additional-information">Additional information<a class="headerlink" href="#additional-information" title="Permanent link">&para;</a></h2>
+<p>The next pages in this guide provide further details on how to access and identify CMS physics objects.</p>
+<p>In addition, in Chapter 7 of the <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookIntroHiLevelReco">CMS Workbook</a> one can find <em>Analysis</em> pages that provide additional information, which can be useful to check on top of the general strategy for accessing objects that was discussed above.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
