@@ -1025,13 +1025,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-simplifying" class="md-nav__link">
-    Data simplifying
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#estimations-of-systematics-uncertainty-sources" class="md-nav__link">
     Estimations of systematics uncertainty sources
   </a>
@@ -1705,13 +1698,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-simplifying" class="md-nav__link">
-    Data simplifying
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#estimations-of-systematics-uncertainty-sources" class="md-nav__link">
     Estimations of systematics uncertainty sources
   </a>
@@ -1764,16 +1750,12 @@
 <span class="nb">cd</span><span class="w"> </span>TagAndProbe/efficiency_tools/fitting
 </code></pre></div>
 You will also need to download the TagAndProbe_Z_Run2012.root file using this link.</p>
-<div class="highlight"><pre><span></span><code>https://cernbox.cern.ch/files/public/show/lqHEasYWJpOZsfq/simplified_datasets_for_fitting_method?items-per-page<span class="o">=</span><span class="m">100</span>
+<div class="highlight"><pre><span></span><code>https://cernbox.cern.ch/files/link/public/lqHEasYWJpOZsfq/simplified_datasets_for_fitting_method?items-per-page<span class="o">=</span><span class="m">100</span><span class="p">&amp;</span>view-mode<span class="o">=</span>resource-table<span class="p">&amp;</span>tiles-size<span class="o">=</span><span class="m">1</span>
 </code></pre></div>
-<h2 id="data-simplifying">Data simplifying<a class="headerlink" href="#data-simplifying" title="Permanent link">&para;</a></h2>
-<p>In order to run this code, use this command to simplify the data so that it can be read by the RooFit root library.</p>
-<p><div class="highlight"><pre><span></span><code>root<span class="w"> </span>simplify_data.cpp
-</code></pre></div>
-TThis will create a "TagAndProbe_Z.root" file, which may take a few minutes. move the file to the DATA folder.</p>
+<p>For MC data you need to download the TagAndProbe_Z_MC.root using the same link. You can also download the TagAndProbe_Jpsi_Run2011.root and TagAndProbe_Jpsi_MC.root files if you wish to use the Jpsi particle instead.</p>
 <h2 id="estimations-of-systematics-uncertainty-sources">Estimations of systematics uncertainty sources<a class="headerlink" href="#estimations-of-systematics-uncertainty-sources" title="Permanent link">&para;</a></h2>
 <p>To estimate the systematic error we will need first to get some uncertainties from the DATA. So, to do that, run the following code.</p>
-<p><div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency.cpp
+<p><div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency_Z.cpp
 </code></pre></div>
 By default, this code will estimate the Muon ID efficiency for the Global Muon ID for |η| distribution, this can be changed by opening the "plot_sys_efficiency.cpp" and commenting and uncommenting the Muon ID and quantity of your desire. This process may take several minutes to complete.</p>
 <p>The systematics uncertainties will be evaluated by making small changes in the fit on the invariant mass distribution of the resonance. For example, the Z decaying in dimuons, in this case, the changes were: 2xVoigtian ("2x Voigtian" as in the code) which means fitting with two voigtians. The other sources are the upper and under limits of invariant mass distribution and so "Mass Up" means making the mass window bigger, and "Mass Down" means making the mass window smaller. Last source you can modify the bin size of the same distribution. "Bin up" means making the fit with more bins and "Bin down" means making the fit with fewer bins.</p>
@@ -1791,7 +1773,7 @@ By default, this code will estimate the Muon ID efficiency for the Global Muon I
 <span class="c1">//string quantity = &quot;Phi&quot;;    double bins[] = {-3.0, -1.8, -1.6, -1.2, -1.0, -0.7, -0.4, -0.2, 0, 0.2, 0.4, 0.7, 1.0, 1.2, 1.6, 1.8, 3.0};</span>
 </code></pre></div>
 <p>and like this to the global Muons.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//Which Muon Id do you want to study?</span>
+<p><div class="highlight"><pre><span></span><code><span class="c1">//Which Muon Id do you want to study?</span>
 <span class="c1">//string MuonId   = &quot;trackerMuon&quot;;</span>
 <span class="c1">//string MuonId   = &quot;standaloneMuon&quot;;</span>
 <span class="n">string</span><span class="w"> </span><span class="n">MuonId</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;globalMuon&quot;</span><span class="p">;</span>
@@ -1803,12 +1785,35 @@ By default, this code will estimate the Muon ID efficiency for the Global Muon I
 <span class="c1">//string quantity = &quot;Eta&quot;;    double bins[] = {-2.4, -1.8, -1.4, -1.2, -1.0, -0.8, -0.5, -0.2, 0, 0.2, 0.5, 0.8, 1.0, 1.2, 1.4, 1.8, 2.4};</span>
 <span class="c1">//string quantity = &quot;Phi&quot;;    double bins[] = {-3.0, -1.8, -1.6, -1.2, -1.0, -0.7, -0.4, -0.2, 0, 0.2, 0.4, 0.7, 1.0, 1.2, 1.6, 1.8, 3.0};</span>
 </code></pre></div>
+If you want to use the MC data, you need to change which fit you will use at the beginning of the code. If this is the case, your code should look like this</p>
+<div class="highlight"><pre><span></span><code>//Change if you need
+
+//#include &quot;src/dofits/DoFit_Jpsi_Run.h&quot;
+//#include &quot;src/dofits/DoFit_Jpsi_Run_2xGaus.h&quot;
+
+//#include &quot;src/dofits/DoFit_Z_Run_2xVoigtian.h&quot;
+//#include &quot;src/dofits/DoFit_Z.h&quot;
+
+#include &quot;src/dofits/DoFit_Z_MC.h&quot;
+#include &quot;src/dofits/DoFit_Z_MC_2xVoigtian.h&quot;
+</code></pre></div>
+<p>For Jpsi use
+<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency_Jpsi.cpp
+</code></pre></div>
+and make the same adjustments but make sure you are changing the fits you use and the MuonId of the correct function.</p>
 <h2 id="systematic-efficiency-overplot">Systematic efficiency overplot<a class="headerlink" href="#systematic-efficiency-overplot" title="Permanent link">&para;</a></h2>
 <p>To better understand the results of the last part, this code will put all the different plots created previously in an image.</p>
 <div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="n">overplot_efficiencies</span><span class="p">.</span><span class="n">cpp</span>
 </code></pre></div>
 <p>You should get a result like this:</p>
 <p><img alt="Efficiency Systematic Overplot 1D" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/06/Z-Sys_Efficiency_overplot1d.png" /></p>
+<p>If you're using the Jpsi particle you need to uncomment line 4 and comment line 3. If that's the case, your code should look like this.
+<div class="highlight"><pre><span></span><code>#include &quot;src/create_folder.h&quot;
+//choose the particle
+//string particle =&quot;Z&quot;;
+string particle =&quot;Jpsi&quot;;
+TEfficiency* read_TEfficiency(const char* folder_path, const char* file_name, const char* TEfficiency_path)
+</code></pre></div></p>
 <h2 id="2d-efficiency-map">2D Efficiency Map<a class="headerlink" href="#2d-efficiency-map" title="Permanent link">&para;</a></h2>
 <p>This code generates a 2D systematic efficiency overplot, it outputs a .root that contains the efficiency histograms that can be visualised by the root TBrowser.</p>
 <div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency_2d.cpp
