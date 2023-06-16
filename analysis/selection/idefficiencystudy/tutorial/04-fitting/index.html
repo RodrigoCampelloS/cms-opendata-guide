@@ -1731,20 +1731,18 @@ You will also need to download the TagAndProbe_Z_Run2012.root file using this li
 <p>For MC data you need to download the TagAndProbe_Z_MC.root using the same link. You can also download the TagAndProbe_Jpsi_Run2011.root and TagAndProbe_Jpsi_MC.root files if you wish to use the Jpsi particle instead.</p>
 <h2 id="fitting">Fitting<a class="headerlink" href="#fitting" title="Permanent link">&para;</a></h2>
 <p>You will have 3 options to edit in order to better fit your needs.
-    1) Which type of data do you want to use?
+1) Which type of data do you want to use?
 <div class="highlight"><pre><span></span><code><span class="c1">//uncomment the fit you want to do </span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/dofits/DoFit_Z.h&quot;</span>
 <span class="c1">//#include &quot;src/dofits/DoFit_Z_MC.h&quot;</span>
 </code></pre></div></p>
-<div class="codehilite"><pre><span></span><code>2)Which Muon Id you want to use?
-</code></pre></div>
-
+<p>2)Which Muon Id you want to use?</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1">//Which Muon Id do you want to study?</span>
 <span class="c1">//string MuonId   = &quot;trackerMuon&quot;;</span>
 <span class="c1">//string MuonId   = &quot;standaloneMuon&quot;;</span>
 <span class="n">string</span><span class="w"> </span><span class="n">MuonId</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;globalMuon&quot;</span><span class="p">;</span>
 </code></pre></div>
-    3)Which quantity you want to use?</p>
+3)Which quantity you want to use?</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//Which Quantity?</span>
 <span class="n">string</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pt&quot;</span><span class="p">;</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">bins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">15.0</span><span class="p">,</span><span class="mf">20.0</span><span class="p">,</span><span class="mf">25.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">40.0</span><span class="p">,</span><span class="mf">120.0</span><span class="p">};</span>
 <span class="c1">//string quantity = &quot;Eta&quot;;    double bins[] = {-2.4, -1.8, -1.4, -1.2, -1.0, -0.8, -0.5, -0.2, 0, 0.2, 0.5, 0.8, 1.0, 1.2, 1.4, 1.8, 2.4};</span>
