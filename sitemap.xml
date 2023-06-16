@@ -141,12 +141,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/04-comparison/</loc>
+         <loc>https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/04-fitting/</loc>
          <lastmod>2023-06-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/05-systematic/</loc>
+         <loc>https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/05-comparison/</loc>
+         <lastmod>2023-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/06-systematic/</loc>
          <lastmod>2023-06-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
