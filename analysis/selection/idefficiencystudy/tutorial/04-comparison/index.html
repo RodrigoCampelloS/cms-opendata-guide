@@ -1933,8 +1933,6 @@ root [1]
 <span class="n">cd</span><span class="w"> </span><span class="n">TagAndProbe</span><span class="o">/</span><span class="n">efficiency_tools</span><span class="o">/</span><span class="n">fitting</span><span class="o">/</span>
 </code></pre></div>
 <p>Open <strong>compare_efficiency.cpp</strong></p>
-<div class="highlight"><pre><span></span><code>gedit<span class="w"> </span>compare_efficiency.cpp
-</code></pre></div>
 <p>You will need to choose which particle you will want to use</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//choose the particle</span>
 
@@ -1942,17 +1940,14 @@ root [1]
 <span class="c1">//string particle =&quot;Jpsi&quot;;</span>
 </code></pre></div>
 <p>You have to edit which quantity and MuonId you want to use:</p>
-<div class="codehilite"><pre><span></span><code>Your code should look like this:
+<div class="highlight"><pre><span></span><code><span class="c1">//string MuonId   = &quot;trackerMuon&quot;;</span>
+<span class="w">    </span><span class="c1">//string MuonId   = &quot;standaloneMuon&quot;;</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">MuonId</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;globalMuon&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pt&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//string quantity = &quot;Eta&quot;;</span>
+<span class="w">    </span><span class="c1">//string quantity = &quot;Phi&quot;;</span>
 </code></pre></div>
-
-<p><code>cpp
-//string MuonId   = "trackerMuon";
-    //string MuonId   = "standaloneMuon";
-    string MuonId   = "globalMuon";
-
-    string quantity = "Pt";
-    //string quantity = "Eta";
-    //string quantity = "Phi";</code></p>
 <p>Doing this and running the program with:</p>
 <div class="highlight"><pre><span></span><code>root<span class="w"> </span>compare_efficiency.cpp
 </code></pre></div>
