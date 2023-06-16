@@ -1763,11 +1763,21 @@ You will also need to download the TagAndProbe_Z_Run2012.root file using this li
 <span class="c1">//string quantity = &quot;Phi&quot;;    double bins[] = {-3.0, -1.8, -1.6, -1.2, -1.0, -0.7, -0.4, -0.2, 0, 0.2, 0.4, 0.7, 1.0, 1.2, 1.6, 1.8, 3.0};</span>
 </code></pre></div>
 <h2 id="running-the-code">Running the Code<a class="headerlink" href="#running-the-code" title="Permanent link">&para;</a></h2>
-<p>In order to do the fit you will have to run this code</p>
+<p>In order to do the fit you will have to run this code:</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="n">efficiency_Z</span><span class="p">.</span><span class="n">cpp</span><span class="w"> </span>
 </code></pre></div>
-You should get something like this</p>
+You should get something like this:</p>
 <p><img alt="Efficiency equation" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Efficiency_Global_Pt.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>for the Jpsi particle use efficiency_Jpsi.cpp</p>
+</div>
+<p>You can always further check the result using the TBrowser</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">root</span>
+<span class="k">new</span><span class="w"> </span><span class="n">TBrowser</span>
+</code></pre></div>
+Go to results&gt;efficiencies&gt;efficiency&gt;Z_Run&gt;Pt_GlobalMuon.root&gt;globalMuon_Pt_Efficiency and you should get something like this:</p>
+<p><img alt="Efficiency equation" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/prints/tbrowser3.png" /></p>
 
 
 
