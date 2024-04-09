@@ -285,86 +285,45 @@ It has only one plot, because the others are in different files. Inside the fold
 Go back to the `main` folder on `sideband_subtraction` folder.
 
 ```cpp
-cd main
-ls
+cd 
+cd TagAndProbe/efficiency_tools/fitting/
 ```
 
-```plaintext
-classes  compare_efficiency.cpp  config  macro.cpp
-```
+Open **compare_efficiency.cpp**
 
-Open **compare_efficiency.cpp** again
-
-```sh
-gedit compare_efficiency.cpp
-```
-
-This is how your code should look like now:
+You will need to choose which particle you will want to use
 
 ```cpp
-//CONFIGS
+//choose the particle
 
-int useScheme = 0;
-//Jpsi    Sideband Run vs Jpsi    Sideband MC
-//Jpsi    Fitting  Run vs Jpsi    Fitting  MC
-//Jpsi    Sideband Run vs Jpsi    Fitting  Run
-//Upsilon Sideband Run vs Upsilon Sideband MC
-//Upsilon Fitting  Run vs Upsilon Fitting  MC
-//Upsilon Sideband Run vs Upsilon Fitting  Run
-
-//Muon id analyse
-bool doTracker    = true;
-bool doStandalone = false;
-bool doGlobal     = false;
-
-//quantity analyse
-bool doPt  = true;
-bool doEta = true;
-bool doPhi = true;
+string particle ="Z";
+//string particle ="Jpsi";
 ```
 
-You have to do just two things:
+You have to edit which quantity and MuonId you want to use:
 
-1. edit `int useScheme` value to current analysis.
+    
+```cpp
+//string MuonId   = "trackerMuon";
+    //string MuonId   = "standaloneMuon";
+    string MuonId   = "globalMuon";
 
-2. Put others quantities expect `pT` to false, we did not obtained &eta; nor &phi; results on previous page.
-
-??? Example "After making those edits"
-    Your code should look like this:
-
-    ```cpp
-    //CONFIGS
-
-    int useScheme = 1;
-    //Jpsi    Sideband Run vs Jpsi    Sideband MC
-    //Jpsi    Fitting  Run vs Jpsi    Fitting  MC
-    //Jpsi    Sideband Run vs Jpsi    Fitting  Run
-    //Upsilon Sideband Run vs Upsilon Sideband MC
-    //Upsilon Fitting  Run vs Upsilon Fitting  MC
-    //Upsilon Sideband Run vs Upsilon Fitting  Run
-
-    //Muon id analyse
-    bool doTracker    = true;
-    bool doStandalone = false;
-    bool doGlobal     = false;
-
-    //quantity analyse
-    bool doPt  = true;
-    bool doEta = false;
-    bool doPhi = false;
-    ```
+    string quantity = "Pt";
+    //string quantity = "Eta";
+    //string quantity = "Phi";
+```
 
 Doing this and running the program with:
 
 ```sh
-root -l compare_efficiency.cpp
+root compare_efficiency.cpp
 ```
 
 Should get you these results:
 
-![Muon_Pt_Tracker_Probe_Efficiency ](../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Jpsi_Fitting_Run_vs_MC/Muon_Pt_Tracker_Probe_Efficiency.png)
-![Muon_Eta_Tracker_Probe_Efficiency](../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Jpsi_Fitting_Run_vs_MC/Muon_Eta_Tracker_Probe_Efficiency.png)
-![Muon_Phi_Tracker_Probe_Efficiency](../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Jpsi_Fitting_Run_vs_MC/Muon_Phi_Tracker_Probe_Efficiency.png)
+![Muon_Pt_Tracker_Probe_Efficiency ](../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Z_Fitting_Run_vs_MC/Muon_Pt_Global_Probe_Efficiency.png)
+![Muon_Eta_Tracker_Probe_Efficiency](../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Z_Fitting_Run_vs_MC/Muon_Eta_Global_Probe_Efficiency.png)
+![Muon_Phi_Tracker_Probe_Efficiency](../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Z_Fitting_Run_vs_MC/Muon_Phi_Global_Probe_Efficiency.png)
 
 !!! Tip "Challenge"
     As you notice here we presented comparison for &eta; and &phi;. Try to go back to fitting method tutorial and redo commands to get efficiencies for these quantities in order to compare with sideband subctraction method. Do not forget to turn `bool doEta` and `bool doPhi` true.
