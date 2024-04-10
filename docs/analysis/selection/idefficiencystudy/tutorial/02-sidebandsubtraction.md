@@ -6,26 +6,26 @@ The reconstruction efficiency is calculated using **only signal muons**. In orde
 
 This method consists in choosing sideband and signal regions in invariant mass distribution. The sideband regions (shaded in red in the figure) have background particles and the signal region (shared in green in the figure) has background and signal particles.
 
-![Invariant Mass histogram](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/InvariantMass_Tracker_region.svg)
+![Invariant Mass histogram](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/InvariantMass_Tracker_region.svg)
 
 !!! Note
     The background corresponds to candidates that do not correspond to the decay of a genuine resonance; for example, the pair is formed by the tag muon associated to an uncorrelated track produced elsewhere in the collision; the corresponding invariant mass has thus a smooth continuous shape, that is extrapolated from the signal regions into the sideband region.
 
 For each event category (i.e. Pass and All), and for a given variable of interest (e.g., the probe pT), two distributions are obtained, one for each region (Signal and Sideband). In order to obtain the variable distribution for the signal only, we proceed by subtracting the Background distribution (Sideband region) from the Signal+Background one (Signal region):
 
-![Sideband Subtraction equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/subtraction.svg)
+![Sideband Subtraction equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/subtraction.svg)
 
 Where the normalization α factor quantifies the quantity of background present in the signal region:
 
-![Alpha factor equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/alpha.svg)
+![Alpha factor equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/alpha.svg)
 
 And for the uncertainty:
 
-![Sideband Subtraction errors equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/subtraction_error.svg)
+![Sideband Subtraction errors equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/subtraction_error.svg)
 
 Applying those equations we get histograms like this:
 
-![Tracker_Probe_Pt_Passing histogram](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/Tracker_Probe_Pt_Passing.svg)
+![Tracker_Probe_Pt_Passing histogram](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/Tracker_Probe_Pt_Passing.svg)
 
 * Solid blue line (Total) = particles in signal region;
 * Dashed blue line (Background) = particles in sideband regions;
@@ -68,7 +68,7 @@ JPsiToMuMu_mergeMCNtuple.root  main  README.md  Run2011AMuOnia_mergeNtuple.root
 
 Your `sideband_subtraction` folder should have these files:
 
-![Files in sideband_subtraction folder](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/files_sideband.png)
+![Files in sideband_subtraction folder](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/files_sideband.png)
 
 ## Preparing code for Data
 
@@ -316,9 +316,9 @@ Done. All result files can be found at "../results/Jpsi_Run_2011/"
 
 If all went well, your results are going to be like these:
 
-![Efficiency_Tracker_Probe_Pt](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/sideband_run2011/Efficiency_Tracker_Probe_Pt.png)
-![Efficiency_Tracker_Probe_Eta](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/sideband_run2011/Efficiency_Tracker_Probe_Eta.png)
-![Efficiency_Tracker_Probe_Phi](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/sideband_run2011/Efficiency_Tracker_Probe_Phi.png)
+![Efficiency_Tracker_Probe_Pt](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/sideband_run2011/Efficiency_Tracker_Probe_Pt.png)
+![Efficiency_Tracker_Probe_Eta](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/sideband_run2011/Efficiency_Tracker_Probe_Eta.png)
+![Efficiency_Tracker_Probe_Phi](../../../../images/analysis/selection/idefficiencystudy/tutorial/02/sideband_run2011/Efficiency_Tracker_Probe_Phi.png)
 
 ## Preparing and running the code for simulation
 

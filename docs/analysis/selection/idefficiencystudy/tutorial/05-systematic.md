@@ -27,7 +27,7 @@ By default, this code will estimate the Muon ID efficiency for the Global Muon I
 
 The systematics uncertainties will be evaluated by making small changes in the fit on the invariant mass distribution of the resonance. For example, the Z decaying in dimuons, in this case, the changes were: 2xVoigtian ("2x Voigtian" as in the code) which means fitting with two voigtians. The other sources are the upper and under limits of invariant mass distribution and so "Mass Up" means making the mass window bigger, and "Mass Down" means making the mass window smaller. Last source you can modify the bin size of the same distribution. "Bin up" means making the fit with more bins and "Bin down" means making the fit with fewer bins.
 
-In order to do the next step you will have to run the "plot_sys_efficiency.cpp" for the Pt of both global and tracker Muon. To get the Pt for the tracker Muons the code should look like this.
+In order to do the next step you will have to run the "plot_sys_efficiency_Z.cpp" for the Pt of both global and tracker Muon. To get the Pt for the tracker Muons the code should look like this.
 
 ```cpp
 //Which Muon Id do you want to study?
