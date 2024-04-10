@@ -10,20 +10,20 @@
       
       
       
-        <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/05-comparison/">
+        <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/analysis/selection/idefficiencystudy/tutorial/05-systematic/">
       
       
-        <link rel="prev" href="../04-fitting/">
+        <link rel="prev" href="../04-comparison/">
       
       
-        <link rel="next" href="../06-systematic/">
+        <link rel="next" href="../../sidebandreferenceguide/macro/">
       
       <link rel="icon" href="../../../../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Comparison From Sideband or Fitting - CMS Open Data Guide</title>
+        <title>Systematic - CMS Open Data Guide</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-make-a-comparison-between-two-previous-methods-of-signal-extraction" class="md-skip">
+        <a href="#procedures-and-strategy-for-estimating-the-systematics-uncertainties" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comparison From Sideband or Fitting
+              Systematic
             
           </span>
         </div>
@@ -942,7 +942,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-sidebandsubtraction/" class="md-nav__link">
+      <a href="../01-introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sidebandsubtraction/" class="md-nav__link">
         Sideband Subtraction
       </a>
     </li>
@@ -956,8 +970,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-fitting/" class="md-nav__link">
+      <a href="../03-fitting/" class="md-nav__link">
         Fitting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-comparison/" class="md-nav__link">
+        Comparison From Sideband or Fitting
       </a>
     </li>
   
@@ -980,12 +1008,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Comparison From Sideband or Fitting
+          Systematic
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Comparison From Sideband or Fitting
+        Systematic
       </a>
       
         
@@ -1004,36 +1032,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-sideband-subtraction-method-code-stores-its-files" class="md-nav__link">
-    How sideband subtraction method code stores its files
+  <a href="#setting-it-up" class="md-nav__link">
+    Setting it up
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-results-between-real-data-and-simulations-for-sideband-method" class="md-nav__link">
-    Comparison results between real data and simulations for sideband method
+  <a href="#estimations-of-systematics-uncertainty-sources" class="md-nav__link">
+    Estimations of systematics uncertainty sources
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-fitting-method-code-stores-its-files" class="md-nav__link">
-    How fitting method code stores its files
+  <a href="#systematic-efficiency-overplot" class="md-nav__link">
+    Systematic efficiency overplot
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-results-between-real-data-and-simulations-for-fitting-method" class="md-nav__link">
-    Comparison results between real data and simulations for fitting method
+  <a href="#2d-efficiency-map" class="md-nav__link">
+    2D Efficiency Map
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-results-between-data-from-the-sideband-and-data-from-the-fitting-method" class="md-nav__link">
-    Comparison results between data from the sideband and data from the fitting method
+  <a href="#scale-factor" class="md-nav__link">
+    Scale Factor
   </a>
   
 </li>
@@ -1042,20 +1070,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-systematic/" class="md-nav__link">
-        Systematic
-      </a>
     </li>
   
 
@@ -1691,36 +1705,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-sideband-subtraction-method-code-stores-its-files" class="md-nav__link">
-    How sideband subtraction method code stores its files
+  <a href="#setting-it-up" class="md-nav__link">
+    Setting it up
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-results-between-real-data-and-simulations-for-sideband-method" class="md-nav__link">
-    Comparison results between real data and simulations for sideband method
+  <a href="#estimations-of-systematics-uncertainty-sources" class="md-nav__link">
+    Estimations of systematics uncertainty sources
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-fitting-method-code-stores-its-files" class="md-nav__link">
-    How fitting method code stores its files
+  <a href="#systematic-efficiency-overplot" class="md-nav__link">
+    Systematic efficiency overplot
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-results-between-real-data-and-simulations-for-fitting-method" class="md-nav__link">
-    Comparison results between real data and simulations for fitting method
+  <a href="#2d-efficiency-map" class="md-nav__link">
+    2D Efficiency Map
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-results-between-data-from-the-sideband-and-data-from-the-fitting-method" class="md-nav__link">
-    Comparison results between data from the sideband and data from the fitting method
+  <a href="#scale-factor" class="md-nav__link">
+    Scale Factor
   </a>
   
 </li>
@@ -1743,255 +1757,113 @@
   
 
 
-<h1 id="how-to-make-a-comparison-between-two-previous-methods-of-signal-extraction">How to make a comparison between two previous methods of signal extraction<a class="headerlink" href="#how-to-make-a-comparison-between-two-previous-methods-of-signal-extraction" title="Permanent link">&para;</a></h1>
-<h2 id="how-sideband-subtraction-method-code-stores-its-files">How sideband subtraction method code stores its files<a class="headerlink" href="#how-sideband-subtraction-method-code-stores-its-files" title="Permanent link">&para;</a></h2>
-<p>the Sideband subtraction code saves every efficiency plot in <code>efficiency/plots/</code> folder inside a single <code>generated_hist.root</code> file. Lets check it!</p>
-<p>You're probably on the <code>main</code> directory. Lets go back one directory.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
-ls
+<h1 id="procedures-and-strategy-for-estimating-the-systematics-uncertainties">Procedures and strategy for estimating the systematics uncertainties<a class="headerlink" href="#procedures-and-strategy-for-estimating-the-systematics-uncertainties" title="Permanent link">&para;</a></h1>
+<h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
+<p>First, clone this repository.</p>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--branch<span class="w"> </span>systematic<span class="w"> </span>https://github.com/RodrigoCampelloS/TagAndProbe.git
+<span class="nb">cd</span><span class="w"> </span>TagAndProbe/efficiency_tools/fitting
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>JPsiToMuMu_mergeMCNtuple.root  README.md  Run2011AMuOnia_mergeNtuple.root
-main                           results
+You will also need to download the TagAndProbe_Z_Run2012.root file using this link.</p>
+<div class="highlight"><pre><span></span><code>https://cernbox.cern.ch/files/link/public/lqHEasYWJpOZsfq/simplified_datasets_for_fitting_method?items-per-page<span class="o">=</span><span class="m">100</span><span class="p">&amp;</span>view-mode<span class="o">=</span>resource-table<span class="p">&amp;</span>tiles-size<span class="o">=</span><span class="m">1</span>
 </code></pre></div>
-<p>A folder named <code>results</code> showed up on this folder. Lets go check its content.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>results
-ls
+<p>For MC data you need to download the TagAndProbe_Z_MC.root using the same link. You can also download the TagAndProbe_Jpsi_Run2011.root and TagAndProbe_Jpsi_MC.root files if you wish to use the Jpsi particle instead.</p>
+<h2 id="estimations-of-systematics-uncertainty-sources">Estimations of systematics uncertainty sources<a class="headerlink" href="#estimations-of-systematics-uncertainty-sources" title="Permanent link">&para;</a></h2>
+<p>To estimate the systematic error we will need first to get some uncertainties from the DATA. So, to do that, run the following code.</p>
+<p><div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency_Z.cpp
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>Jpsi_MC_2020  Jpsi_Run_2011
-</code></pre></div>
-<p>If you did every step of the sideband subtraction on this page lesson, these results should match with the results on your pc. Access one of those folders (except comparison).</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Jpsi_Run_2011
-ls
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Efficiency_Tracker_Probe_Eta.png  Tracker_Probe_Eta_All.png
-Efficiency_Tracker_Probe_Phi.png  Tracker_Probe_Eta_Passing.png
-Efficiency_Tracker_Probe_Pt.png   Tracker_Probe_Phi_All.png
-generated_hist.root               Tracker_Probe_Phi_Passing.png
-InvariantMass_Tracker.png         Tracker_Probe_Pt_All.png
-InvariantMass_Tracker_region.png  Tracker_Probe_Pt_Passing.png
-</code></pre></div>
-<p>Here, all the output plots you saw when running the sideband subtraction method are stored as a <code>.png</code>. Aside from them, there's a <code>generated_hist.root</code> that stores the efficiency in a way that we can manipulate it after. This file is needed to run the comparison between efficiencies for the sideband subtraction method. Lets look inside of this file.</p>
-<p>Run this command to open <code>generated_hist.root</code> with ROOT:</p>
-<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>generated_hist.root
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>root [0]
-Attaching file generated_hist.root as _file0...
-(TFile *) 0x55dca0f04c50
-root [1]
-</code></pre></div>
-<p>Lets check its content. Type on terminal:</p>
-<div class="highlight"><pre><span></span><code>new<span class="w"> </span>TBrowser
-</code></pre></div>
-<p>You should see something like this:</p>
-<p><img alt="TBrowser" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/prints/tbrowser0.png" /></p>
-<p>This is a visual navigator of a <code>.root</code> file. Here you can see the struture of <code>generated_hist.root</code>. Double click the folders to open them and see their content. The Efficiency plots we see are stored in <code>efficiency/plots/</code> folder:</p>
-<p><img alt="TBrowser showing plots folder" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/prints/tbrowser1.png" /></p>
-<p>You can double click each plot to see its content:</p>
-<p><img alt="TBrowser showing efficiency plot for sideband subtraction method" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/prints/tbrowser2.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To close this window, click on terminal and press <code>Ctrl</code> + <code>C</code>. This command stops any processes happening in the terminal.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Key Point</p>
-<ul>
-<li>As you see, the <code>.root</code> file has paths inside of it and the efficiencies plots have a self path inside them as well!</li>
-</ul>
-</div>
-<h2 id="comparison-results-between-real-data-and-simulations-for-sideband-method">Comparison results between real data and simulations for sideband method<a class="headerlink" href="#comparison-results-between-real-data-and-simulations-for-sideband-method" title="Permanent link">&para;</a></h2>
-<p>After runinng the sideband subtraction code, we get a <code>.root</code> with all the efficiencies plots inside it in two different folders:</p>
-<ul>
-<li><code>../results/Jpsi_Run_2011/generated_hist.root</code></li>
-<li><code>../results/Jpsi_MC_2020/generated_hist.root</code></li>
-</ul>
-<p>We'll get back to this on the discussion below.</p>
-<p>Head back to the <code>main</code> folder. Inside of it there is a code for the efficiency plot comparison. Lets check it out. From the <code>sideband_subtraction</code> folder, type:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>main
-ls
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>classes  compare_efficiency.cpp  config  macro.cpp
-</code></pre></div>
-<p>There is it. Now lets open it.</p>
-<div class="highlight"><pre><span></span><code>gedit<span class="w"> </span>compare_efficiency.cpp
-</code></pre></div>
-<p>Its easy to prepare it for the sideband subtraction comparison. Our main editing point can be found in this part:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//CONFIGS</span>
+By default, this code will estimate the Muon ID efficiency for the Global Muon ID for |η| distribution, this can be changed by opening the "plot_sys_efficiency_Z.cpp" and commenting and uncommenting the Muon ID and quantity of your desire. This process may take several minutes to complete.</p>
+<p>The systematics uncertainties will be evaluated by making small changes in the fit on the invariant mass distribution of the resonance. For example, the Z decaying in dimuons, in this case, the changes were: 2xVoigtian ("2x Voigtian" as in the code) which means fitting with two voigtians. The other sources are the upper and under limits of invariant mass distribution and so "Mass Up" means making the mass window bigger, and "Mass Down" means making the mass window smaller. Last source you can modify the bin size of the same distribution. "Bin up" means making the fit with more bins and "Bin down" means making the fit with fewer bins.</p>
+<p>In order to do the next step you will have to run the "plot_sys_efficiency.cpp" for the Pt of both global and tracker Muon. To get the Pt for the tracker Muons the code should look like this.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Which Muon Id do you want to study?</span>
+<span class="n">string</span><span class="w"> </span><span class="n">MuonId</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;trackerMuon&quot;</span><span class="p">;</span>
+<span class="c1">//string MuonId   = &quot;standaloneMuon&quot;;</span>
+<span class="c1">//string MuonId   = &quot;globalMuon&quot;;</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="n">useScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="c1">//Jpsi    Sideband Run vs Jpsi    Sideband MC</span>
-<span class="c1">//Jpsi    Fitting  Run vs Jpsi    Fitting  MC</span>
-<span class="c1">//Jpsi    Sideband Run vs Jpsi    Fitting  Run</span>
-<span class="c1">//Upsilon Sideband Run vs Upsilon Sideband MC</span>
-<span class="c1">//Upsilon Fitting  Run vs Upsilon Fitting  MC</span>
-<span class="c1">//Upsilon Sideband Run vs Upsilon Fitting  Run</span>
+<span class="c1">//Which quantity do you want to use?</span>
 
-<span class="c1">//Muon id analyse</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doTracker</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doStandalone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doGlobal</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="c1">//for Z</span>
+<span class="n">string</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pt&quot;</span><span class="p">;</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">bins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">15.0</span><span class="p">,</span><span class="mf">20.0</span><span class="p">,</span><span class="mf">25.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">40.0</span><span class="p">,</span><span class="mf">120.0</span><span class="p">};</span>
+<span class="c1">//string quantity = &quot;Eta&quot;;    double bins[] = {-2.4, -1.8, -1.4, -1.2, -1.0, -0.8, -0.5, -0.2, 0, 0.2, 0.5, 0.8, 1.0, 1.2, 1.4, 1.8, 2.4};</span>
+<span class="c1">//string quantity = &quot;Phi&quot;;    double bins[] = {-3.0, -1.8, -1.6, -1.2, -1.0, -0.7, -0.4, -0.2, 0, 0.2, 0.4, 0.7, 1.0, 1.2, 1.6, 1.8, 3.0};</span>
+</code></pre></div>
+<p>and like this to the global Muons.</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">//Which Muon Id do you want to study?</span>
+<span class="c1">//string MuonId   = &quot;trackerMuon&quot;;</span>
+<span class="c1">//string MuonId   = &quot;standaloneMuon&quot;;</span>
+<span class="n">string</span><span class="w"> </span><span class="n">MuonId</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;globalMuon&quot;</span><span class="p">;</span>
 
-<span class="c1">//quantity analyse</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doPt</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doEta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doPhi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the scope above we see:</p>
-<ul>
-<li><code>int useScheme</code> represents which comparison you are doing.</li>
-<li><code>bool doTracker</code> is a variable that allow plots for tracker muons.</li>
-<li><code>bool doStandalone</code> is a variable that allow plots for standalone muons.</li>
-<li><code>bool doGlobal</code> is a variable that allow plots for global muons.</li>
-<li><code>bool doPt</code> is a variable that allow plots for muon pT.</li>
-<li><code>bool doEta</code> is a variable that allow plots for muon &eta;.</li>
-<li><code>bool doPhi</code> is a variable that allow plots for muon &phi;.</li>
-</ul>
-</div>
-<p>Everything is up to date to compare sideband subtraction's results between real data and simulations, except it is comparing standalone and global muons. As we are  looking for tracker muons efficiencies only, you should <strong>switch to false variables for Standalone and Global</strong>.</p>
-<p>Also, you will need to change the <code>useScheme</code> variable to plot what you want to plot. As we want to plot <strong>efficiency of real data and simulated data</strong>, the value has to be 0.</p>
-<details class="example">
-<summary>See result scructure</summary>
-<p>If you deleted the right lines, your code now should be like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//CONFIGS</span>
+<span class="c1">//Which quantity do you want to use?</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="n">useScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="c1">//Jpsi    Sideband Run vs Jpsi    Sideband MC</span>
-<span class="c1">//Jpsi    Fitting  Run vs Jpsi    Fitting  MC</span>
-<span class="c1">//Jpsi    Sideband Run vs Jpsi    Fitting  Run</span>
-<span class="c1">//Upsilon Sideband Run vs Upsilon Sideband MC</span>
-<span class="c1">//Upsilon Fitting  Run vs Upsilon Fitting  MC</span>
-<span class="c1">//Upsilon Sideband Run vs Upsilon Fitting  Run</span>
+<span class="c1">//for Z</span>
+<span class="n">string</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pt&quot;</span><span class="p">;</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">bins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">15.0</span><span class="p">,</span><span class="mf">20.0</span><span class="p">,</span><span class="mf">25.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">40.0</span><span class="p">,</span><span class="mf">120.0</span><span class="p">};</span>
+<span class="c1">//string quantity = &quot;Eta&quot;;    double bins[] = {-2.4, -1.8, -1.4, -1.2, -1.0, -0.8, -0.5, -0.2, 0, 0.2, 0.5, 0.8, 1.0, 1.2, 1.4, 1.8, 2.4};</span>
+<span class="c1">//string quantity = &quot;Phi&quot;;    double bins[] = {-3.0, -1.8, -1.6, -1.2, -1.0, -0.7, -0.4, -0.2, 0, 0.2, 0.4, 0.7, 1.0, 1.2, 1.6, 1.8, 3.0};</span>
+</code></pre></div>
+If you want to use the MC data, you need to change which fit you will use at the beginning of the code. If this is the case, your code should look like this</p>
+<div class="highlight"><pre><span></span><code>//Change if you need
 
-<span class="c1">//Muon id analyse</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doTracker</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doStandalone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doGlobal</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+//#include &quot;src/dofits/DoFit_Jpsi_Run.h&quot;
+//#include &quot;src/dofits/DoFit_Jpsi_Run_2xGaus.h&quot;
 
-<span class="c1">//quantity analyse</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doPt</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doEta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">doPhi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-</code></pre></div>
-<p>Let your variables like this.</p>
-</details>
-<p>Now you need to run the code. To do this, save the file and type on your terminal:</p>
-<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>compare_efficiency.cpp
-</code></pre></div>
-<p>If everything went well, the message you'll see in terminal at end of the process is:</p>
-<div class="highlight"><pre><span></span><code>Use Scheme: 0
-Done. All result files can be found at &quot;../results/Comparison_Upsilon_Sideband_Run_vs_MC/&quot;
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The command above to run the code will display three new windows on your screen with comparison plots. You can avoid them by running straight the <strong>command below</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">compare_efficiency</span><span class="p">.</span><span class="n">cpp</span>
-</code></pre></div>
-<p>In this case, to check it results you are going to need go for result folder (printed on code run) and check images there by yourself.
-You can try to run <code>new TBrowser</code> again:</p>
-<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="p">[</span><span class="n">FOLDER_PATH</span><span class="p">]</span>
-<span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">l</span>
-<span class="k">new</span><span class="w"> </span><span class="n">TBrowser</span>
-</code></pre></div>
-</div>
-<p>And as output plots comparison, you get:</p>
-<p><img alt="Muon_Pt_Tracker_Probe_Efficiency " src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Jpsi_Sideband_Run_vs_MC/Muon_Pt_Tracker_Probe_Efficiency.png" />
-<img alt="Muon_Eta_Tracker_Probe_Efficiency" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Jpsi_Sideband_Run_vs_MC/Muon_Eta_Tracker_Probe_Efficiency.png" />
-<img alt="Muon_Phi_Tracker_Probe_Efficiency" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Jpsi_Sideband_Run_vs_MC/Muon_Phi_Tracker_Probe_Efficiency.png" /></p>
-<p>Now you can type the command below to <strong>quit root</strong> and close all created windows:</p>
-<div class="highlight"><pre><span></span><code>.q
-</code></pre></div>
-<h2 id="how-fitting-method-code-stores-its-files">How fitting method code stores its files<a class="headerlink" href="#how-fitting-method-code-stores-its-files" title="Permanent link">&para;</a></h2>
-<p>To do the next part, first you need to understand how the fitting method code saves. It is not so different than sideband subtraction method. Lets look at how they are saved.</p>
-<p>If you look inside <code>fitting\results'</code> folder, where is stored fitting method results, you will see another folder named <code>efficiencies</code>. lets go there by terminal from <code>fitting</code> folder:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>results/efficiencies
-ls
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>efficiency
-</code></pre></div>
-<p>Inside of it there is a unique folder named efficiency. It is necessary because later on, we will work in efficiencies in 2 dimentions. The efficiency folder means it is one-dimensional, which we worked here so on.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>efficiency
-ls
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Comparison_Run2011_vs_MC  Jpsi_MC_2020  Jpsi_Run_2011
-</code></pre></div>
-<p>Let's go inside one of them:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Jpsi_Run_2011
-ls
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Pt_trackerMuon.root
-</code></pre></div>
-<p>For every configuration for a specific dataset, they will create <code>.root</code> files inside its respectively folder. For example, this one folder that we choose will have all calculations for the J/&psi; real data dataset.</p>
-<p>If you go with your terminal to this folder and run this command, you'll see that the result files only have one plot on main folder.</p>
-<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>Pt_trackerMuon.root
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>root [0]
-Attaching file Pt_trackerMuon.root as _file0...
-(TFile *) 0x55efb5f44930
-root [1]
-</code></pre></div>
-<p>Now lets look at its content. Type on terminal:</p>
-<div class="highlight"><pre><span></span><code><span class="k">new</span><span class="w"> </span><span class="n">TBrowser</span>
-</code></pre></div>
-<p>It has only one plot, because the others are in different files. Inside the folder <code>histograms</code>, you can find the histograms that created this efficiency result.</p>
-<p><img alt="TBrowser showing efficiency plot for fitting method" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/prints/fitting_tbrowser.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Key Point</p>
-<ul>
-<li>There is a <code>.root</code> file for each efficiency plot created with the fitting method.</li>
-</ul>
-</div>
-<h2 id="comparison-results-between-real-data-and-simulations-for-fitting-method">Comparison results between real data and simulations for fitting method<a class="headerlink" href="#comparison-results-between-real-data-and-simulations-for-fitting-method" title="Permanent link">&para;</a></h2>
-<p>Go back to the <code>main</code> folder on <code>sideband_subtraction</code> folder.</p>
-<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span>
-<span class="n">cd</span><span class="w"> </span><span class="n">TagAndProbe</span><span class="o">/</span><span class="n">efficiency_tools</span><span class="o">/</span><span class="n">fitting</span><span class="o">/</span>
-</code></pre></div>
-<p>Open <strong>compare_efficiency.cpp</strong></p>
-<p>You will need to choose which particle you will want to use</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//choose the particle</span>
+//#include &quot;src/dofits/DoFit_Z_Run_2xVoigtian.h&quot;
+//#include &quot;src/dofits/DoFit_Z.h&quot;
 
-<span class="n">string</span><span class="w"> </span><span class="n">particle</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Z&quot;</span><span class="p">;</span>
-<span class="c1">//string particle =&quot;Jpsi&quot;;</span>
+#include &quot;src/dofits/DoFit_Z_MC.h&quot;
+#include &quot;src/dofits/DoFit_Z_MC_2xVoigtian.h&quot;
 </code></pre></div>
-<p>You have to edit which quantity and MuonId you want to use:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//string MuonId   = &quot;trackerMuon&quot;;</span>
-<span class="w">    </span><span class="c1">//string MuonId   = &quot;standaloneMuon&quot;;</span>
-<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">MuonId</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;globalMuon&quot;</span><span class="p">;</span>
+<p>For Jpsi use
+<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency_Jpsi.cpp
+</code></pre></div>
+and make the same adjustments but make sure you are changing the fits you use and the MuonId of the correct function.</p>
+<h2 id="systematic-efficiency-overplot">Systematic efficiency overplot<a class="headerlink" href="#systematic-efficiency-overplot" title="Permanent link">&para;</a></h2>
+<p>To better understand the results of the last part, this code will put all the different plots created previously in an image.</p>
+<div class="highlight"><pre><span></span><code><span class="n">root</span><span class="w"> </span><span class="n">overplot_efficiencies</span><span class="p">.</span><span class="n">cpp</span>
+</code></pre></div>
+<p>You should get a result like this:</p>
+<p><img alt="Efficiency Systematic Overplot 1D" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/05/Z-Sys_Efficiency_overplot1d.png" /></p>
+<p>If you're using the Jpsi particle you need to uncomment line 4 and comment line 3. If that's the case, your code should look like this.
+<div class="highlight"><pre><span></span><code>#include &quot;src/create_folder.h&quot;
+//choose the particle
+//string particle =&quot;Z&quot;;
+string particle =&quot;Jpsi&quot;;
+TEfficiency* read_TEfficiency(const char* folder_path, const char* file_name, const char* TEfficiency_path)
+</code></pre></div></p>
+<h2 id="2d-efficiency-map">2D Efficiency Map<a class="headerlink" href="#2d-efficiency-map" title="Permanent link">&para;</a></h2>
+<p>This code generates a 2D systematic efficiency overplot, it outputs a .root that contains the efficiency histograms that can be visualised by the root TBrowser.</p>
+<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>plot_sys_efficiency_2d.cpp
+</code></pre></div>
+<p>This is one of the graphs that will be generated.</p>
+<p><img alt="Efficiency Systematic Overplot 2D" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/05/Z-Sys_Efficiency_overplot2d.png" /></p>
+<p>It is noteworthy that the uncertainties presented above in the 2d map are already the quadrature sum of systematics and statistical uncertainties.</p>
+<p>If you're using the Jpsi particle you need to choose which fit function you will use and the particle. Your code should look like this.
+<div class="highlight"><pre><span></span><code>//Change if you need
+#include &quot;src/dofits/DoFit_Jpsi_Run.h&quot;
+#include &quot;src/dofits/DoFit_Jpsi_Run_2xGaus.h&quot;
+#include &quot;src/dofits/DoFit_Z_Run_2xVoigtian.h&quot;
+//#include &quot;src/dofits/DoFit_Z.h&quot;
+//#include &quot;src/dofits/DoFit_Z_MC.h&quot;
+//#include &quot;src/dofits/DoFit_Z_MC_2xVoigtian.h&quot;
+//#include &quot;src/dofits/DoFit_Jpsi_MC.h&quot;
+//#include &quot;src/dofits/DoFit_Jpsi_MC_2xGaus.h&quot;
+#include &quot;src/create_folder.h&quot;
+#include &quot;src/create_TH2D.h&quot;
+#include &quot;src/get_efficiency_TH2D.h&quot;
+#include &quot;src/get_efficiency_TH2DJpsi.h&quot;
+#include &quot;src/yields_n_errs_to_TH2Ds_bin.h&quot;
 
-<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pt&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//string quantity = &quot;Eta&quot;;</span>
-<span class="w">    </span><span class="c1">//string quantity = &quot;Phi&quot;;</span>
+//particle
+//string particle = &quot;Z&quot;;
+string particle = &quot;Jpsi&quot;;
+</code></pre></div></p>
+<h2 id="scale-factor">Scale Factor<a class="headerlink" href="#scale-factor" title="Permanent link">&para;</a></h2>
+<p>For this one, you will have to run the same commands as before but with MC (Monte Carlo) data, follow the same steps as before but with the new file as your source. This 2d map consists of dividing the real data efficiency value by the MC efficiency value.</p>
+<p><div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>scale_factor_Z.cpp
 </code></pre></div>
-<p>Doing this and running the program with:</p>
-<div class="highlight"><pre><span></span><code>root<span class="w"> </span>compare_efficiency.cpp
+This is one of the graphs that will be generated.</p>
+<p><img alt="Efficiency Scale Factor" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/05/Z-Sys_Efficiency_Scale_Factor.png" /></p>
+<p>If you are using the Jpsi particle use this instead</p>
+<div class="highlight"><pre><span></span><code>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>scale_factor_Jpsi.cpp
 </code></pre></div>
-<p>Should get you these results:</p>
-<p><img alt="Muon_Pt_Tracker_Probe_Efficiency " src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Z_Fitting_Run_vs_MC/Muon_Pt_Global_Probe_Efficiency.png" />
-<img alt="Muon_Eta_Tracker_Probe_Efficiency" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Z_Fitting_Run_vs_MC/Muon_Eta_Global_Probe_Efficiency.png" />
-<img alt="Muon_Phi_Tracker_Probe_Efficiency" src="../../../../../images/analysis/selection/idefficiencystudy/tutorial/04/Comparison_Z_Fitting_Run_vs_MC/Muon_Phi_Global_Probe_Efficiency.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Challenge</p>
-<p>As you notice here we presented comparison for &eta; and &phi;. Try to go back to fitting method tutorial and redo commands to get efficiencies for these quantities in order to compare with sideband subctraction method. Do not forget to turn <code>bool doEta</code> and <code>bool doPhi</code> true.</p>
-</div>
-<p>Now you can type the command below to <strong>quit root</strong> and close all created windows:</p>
-<div class="highlight"><pre><span></span><code>.q
-</code></pre></div>
-<h2 id="comparison-results-between-data-from-the-sideband-and-data-from-the-fitting-method">Comparison results between data from the sideband and data from the fitting method<a class="headerlink" href="#comparison-results-between-data-from-the-sideband-and-data-from-the-fitting-method" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Challenge</p>
-<p>Using what you did before, try to mix them and plot a comparison <strong>between real data for sideband method and real data for sthe fitting method</strong> and get an analysis.
-Notice that:</p>
-<ul>
-<li>Real data = Run 2011</li>
-<li>Simulations = Monte Carlo = MC</li>
-</ul>
-<p>Tip: you just need to change what you saw in this page to do this comparison.</p>
-</div>
-<hr />
-<div class="admonition tip">
-<p class="admonition-title">Extra challenge</p>
-<p>As you did with the last 2 extras challenges, try to redo this exercise comparing results between &Upsilon; datas.</p>
-</div>
 
 
 
