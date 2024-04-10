@@ -8,6 +8,7 @@ First, clone this repository.
 git clone --branch systematic https://github.com/RodrigoCampelloS/TagAndProbe.git
 cd TagAndProbe/efficiency_tools/fitting
 ```
+
 You will also need to download the TagAndProbe_Z_Run2012.root file using this link.
 
 ```sh
@@ -82,6 +83,7 @@ For Jpsi use
 ```sh
 root -l -b -q plot_sys_efficiency_Jpsi.cpp
 ```
+
 and make the same adjustments but make sure you are changing the fits you use and the MuonId of the correct function.
 
 ## Systematic efficiency overplot

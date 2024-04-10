@@ -16,6 +16,7 @@ First, clone this repository.
 git clone --branch systematic https://github.com/RodrigoCampelloS/TagAndProbe.git
 cd TagAndProbe/efficiency_tools/fitting
 ```
+
 You will also need to download the TagAndProbe_Z_Run2012.root file using this link.
 
 ```sh
@@ -44,8 +45,8 @@ You will have 3 options to edit in order to better fit your needs.
 //string MuonId   = "trackerMuon";
 //string MuonId   = "standaloneMuon";
 string MuonId   = "globalMuon";
-
 ```
+
 3- Which quantity you want to use?
 
 ```cpp
@@ -62,6 +63,7 @@ In order to do the fit you will have to run this code:
 ```cpp
 root efficiency_Z.cpp 
 ```
+
 You should get something like this:
 
 ![Efficiency equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/Efficiency_Global_Pt.png)
@@ -75,6 +77,7 @@ You can always further check the result using the TBrowser
 root
 new TBrowser
 ```
+
 Go to results>efficiencies>efficiency>Z_Run>Pt_GlobalMuon.root>globalMuon_Pt_Efficiency and you should get something like this:
 
 ![Efficiency equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/03/prints/tbrowser3.png)
