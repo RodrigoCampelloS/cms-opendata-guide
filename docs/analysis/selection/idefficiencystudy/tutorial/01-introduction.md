@@ -15,7 +15,7 @@ The resonance, used to calculate the efficiencies, decays to a pair of particles
 
 ## How do we calculate the efficiency?
 
-The efficiency is given by the fraction of probe muons that pass a given criteria (in this case, the **Muon ID** which we explain [below](#cms-muon-identification-reconstruction)):
+The efficiency is given by the fraction of probe muons that pass a given criteria (in this case, the **Muon ID** which we explain [below](#cms-muon-identification-and-reconstruction)):
 
 ![Efficiency equation](../../../../images/analysis/selection/idefficiencystudy/tutorial/01/efficiency.svg)
 
