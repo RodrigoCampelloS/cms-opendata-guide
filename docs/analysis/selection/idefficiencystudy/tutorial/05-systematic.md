@@ -23,6 +23,7 @@ To estimate the systematic error we will need first to get some uncertainties fr
 ```sh
 root -l -b -q plot_sys_efficiency_Z.cpp
 ```
+
 By default, this code will estimate the Muon ID efficiency for the Global Muon ID for |η| distribution, this can be changed by opening the "plot_sys_efficiency_Z.cpp" and commenting and uncommenting the Muon ID and quantity of your desire. This process may take several minutes to complete.
 
 The systematics uncertainties will be evaluated by making small changes in the fit on the invariant mass distribution of the resonance. For example, the Z decaying in dimuons, in this case, the changes were: 2xVoigtian ("2x Voigtian" as in the code) which means fitting with two voigtians. The other sources are the upper and under limits of invariant mass distribution and so "Mass Up" means making the mass window bigger, and "Mass Down" means making the mass window smaller. Last source you can modify the bin size of the same distribution. "Bin up" means making the fit with more bins and "Bin down" means making the fit with fewer bins.
@@ -60,6 +61,7 @@ string quantity = "Pt";     double bins[] = {15.0,20.0,25.0,30.0,40.0,120.0};
 //string quantity = "Phi";    double bins[] = {-3.0, -1.8, -1.6, -1.2, -1.0, -0.7, -0.4, -0.2, 0, 0.2, 0.4, 0.7, 1.0, 1.2, 1.6, 1.8, 3.0};
 
 ```
+
 If you want to use the MC data, you need to change which fit you will use at the beginning of the code. If this is the case, your code should look like this
 
 ```
@@ -76,6 +78,7 @@ If you want to use the MC data, you need to change which fit you will use at the
 ```
 
 For Jpsi use
+
 ```sh
 root -l -b -q plot_sys_efficiency_Jpsi.cpp
 ```
@@ -94,6 +97,7 @@ You should get a result like this:
 ![Efficiency Systematic Overplot 1D](../../../../images/analysis/selection/idefficiencystudy/tutorial/05/Z-Sys_Efficiency_overplot1d.png)
 
 If you're using the Jpsi particle you need to uncomment line 4 and comment line 3. If that's the case, your code should look like this.
+
 ```
 #include "src/create_folder.h"
 //choose the particle
@@ -117,6 +121,7 @@ This is one of the graphs that will be generated.
 It is noteworthy that the uncertainties presented above in the 2d map are already the quadrature sum of systematics and statistical uncertainties.
 
 If you're using the Jpsi particle you need to choose which fit function you will use and the particle. Your code should look like this.
+
 ```
 //Change if you need
 #include "src/dofits/DoFit_Jpsi_Run.h"
@@ -145,6 +150,7 @@ For this one, you will have to run the same commands as before but with MC (Mont
 ```sh
 root -l -b -q scale_factor_Z.cpp
 ```
+
 This is one of the graphs that will be generated.
 
 ![Efficiency Scale Factor](../../../../images/analysis/selection/idefficiencystudy/tutorial/05/Z-Sys_Efficiency_Scale_Factor.png)
