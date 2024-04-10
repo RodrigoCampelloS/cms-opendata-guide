@@ -65,7 +65,7 @@ string quantity = "Pt";     double bins[] = {15.0,20.0,25.0,30.0,40.0,120.0};
 
 If you want to use the MC data, you need to change which fit you will use at the beginning of the code. If this is the case, your code should look like this
 
-```
+```cpp
 //Change if you need
 
 //#include "src/dofits/DoFit_Jpsi_Run.h"
@@ -100,7 +100,7 @@ You should get a result like this:
 
 If you're using the Jpsi particle you need to uncomment line 4 and comment line 3. If that's the case, your code should look like this.
 
-```
+```cpp
 #include "src/create_folder.h"
 //choose the particle
 //string particle ="Z";
@@ -124,7 +124,7 @@ It is noteworthy that the uncertainties presented above in the 2d map are alread
 
 If you're using the Jpsi particle you need to choose which fit function you will use and the particle. Your code should look like this.
 
-```
+```cpp
 //Change if you need
 #include "src/dofits/DoFit_Jpsi_Run.h"
 #include "src/dofits/DoFit_Jpsi_Run_2xGaus.h"
