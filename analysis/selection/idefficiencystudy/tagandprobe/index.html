@@ -1611,18 +1611,7 @@
 <p><img alt="Efficiency equation" src="../../../../images/analysis/selection/idefficiencystudy/tagandprobe/efficiency.svg" /></p>
 <p>The denominator corresponds to the number of resonance candidates (tag+probe pairs) reconstructed in the dataset. The numerator corresponds to the subset for which the probe passes the criteria.</p>
 <h2 id="cms-muon-identification-and-reconstruction">CMS Muon identification and reconstruction<a class="headerlink" href="#cms-muon-identification-and-reconstruction" title="Permanent link">&para;</a></h2>
-<p>In the standard CMS reconstruction for proton-proton collisions, tracks are first reconstructed independently in the inner tracker and in the muon system. Based on these objects, three reconstruction approaches are used:</p>
-<ul>
-<li>
-<p><strong>Tracker Muon</strong> reconstruction:  all tracker tracks with pT &gt; 0.5 GeV/c and total momentum p &gt; 2.5 GeV/c are considered as possible muon candidates, and are extrapolated to the muon system taking into account the magnetic field;</p>
-</li>
-<li>
-<p><strong>Standalone Muon</strong> reconstruction: all tracks of the segments reconstructed in the muon chambers (performed using segments and hits from Drift Tubes in the barrel region, Cathode Strip Chambers and Resistive Plates Chambers in the endcaps) are used to generate “seeds” consisting of position and direction vectors and an estimate of the muon transverse momentum;</p>
-</li>
-<li>
-<p><strong>Global Muon</strong> reconstruction: starts from a Standalone reconstructed muon track and extrapolates its trajectory from the innermost muon station through the coil and both calorimeters to the outer tracker surface.</p>
-</li>
-</ul>
+<p>In the standard CMS reconstruction for proton-proton collisions, tracks are first reconstructed independently in the inner tracker and in the muon system. Based on these objects, three reconstruction approaches are used, Tracker Muon, Standalone Muon, Global Muon:</p>
 <p>These are illustrated below:</p>
 <p><img alt="Muons identification" src="../../../../images/analysis/selection/idefficiencystudy/tagandprobe/muons_id.png" /></p>
 <div class="admonition note">
