@@ -10,27 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/analysis/backgrounds/qcdestimation/">
+        <link rel="canonical" href="https://cms-opendata-guide.web.cern.ch/analysis/backgrounds/">
       
       
-        <link rel="prev" href="../techniques/">
+        <link rel="prev" href="../lumi/">
       
       
-        <link rel="next" href="../../systematics/lumiuncertain/">
+        <link rel="next" href="../systematics/lumiuncertain/">
       
-      <link rel="icon" href="../../../images/favicon.ico">
+      <link rel="icon" href="../../images/cms-od.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>QCD Estimation - CMS Open Data Guide</title>
+        <title>Background Modelling - CMS Open Data Guide</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#qcd-estimation" class="md-skip">
+        <a href="#background-modelling-techniques" class="md-skip">
           Skip to content
         </a>
       
@@ -89,9 +89,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="CMS Open Data Guide" class="md-header__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
+    <a href="../.." title="CMS Open Data Guide" class="md-header__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
       
-  <img src="../../../images/cmslogo.png" alt="logo">
+  <img src="../../images/cms-od.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QCD Estimation
+              Background Modelling
             
           </span>
         </div>
@@ -188,9 +188,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="CMS Open Data Guide" class="md-nav__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
+    <a href="../.." title="CMS Open Data Guide" class="md-nav__button md-logo" aria-label="CMS Open Data Guide" data-md-component="logo">
       
-  <img src="../../../images/cmslogo.png" alt="logo">
+  <img src="../../images/cms-od.png" alt="logo">
 
     </a>
     CMS Open Data Guide
@@ -218,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -260,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmsOpenData/cernportal/" class="md-nav__link">
+      <a href="../../cmsOpenData/cernportal/" class="md-nav__link">
         CERN Open Data Portal
       </a>
     </li>
@@ -274,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmsOpenData/cmsopendata/" class="md-nav__link">
+      <a href="../../cmsOpenData/cmsopendata/" class="md-nav__link">
         CMS Open Data
       </a>
     </li>
@@ -288,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmsOpenData/findingData/" class="md-nav__link">
+      <a href="../../cmsOpenData/findingData/" class="md-nav__link">
         Finding Data
       </a>
     </li>
@@ -302,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmsOpenData/workshops/" class="md-nav__link">
+      <a href="../../cmsOpenData/workshops/" class="md-nav__link">
         Workshops
       </a>
     </li>
@@ -351,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/unix/" class="md-nav__link">
+      <a href="../../tools/unix/" class="md-nav__link">
         UNIX
       </a>
     </li>
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/root/" class="md-nav__link">
+      <a href="../../tools/root/" class="md-nav__link">
         ROOT
       </a>
     </li>
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/cppandpython/" class="md-nav__link">
+      <a href="../../tools/cppandpython/" class="md-nav__link">
         C++ and Python
       </a>
     </li>
@@ -393,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/git/" class="md-nav__link">
+      <a href="../../tools/git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/docker/" class="md-nav__link">
+      <a href="../../tools/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/virtualmachines/" class="md-nav__link">
+      <a href="../../tools/virtualmachines/" class="md-nav__link">
         Virtual Machines
       </a>
     </li>
@@ -470,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmssw/cmsswoverview/" class="md-nav__link">
+      <a href="../../cmssw/cmsswoverview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -484,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmssw/cmsswdatamodel/" class="md-nav__link">
+      <a href="../../cmssw/cmsswdatamodel/" class="md-nav__link">
         Data Model
       </a>
     </li>
@@ -498,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmssw/cmsswanalyzers/" class="md-nav__link">
+      <a href="../../cmssw/cmsswanalyzers/" class="md-nav__link">
         Analyzers
       </a>
     </li>
@@ -512,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmssw/cmsswconfigure/" class="md-nav__link">
+      <a href="../../cmssw/cmsswconfigure/" class="md-nav__link">
         Configuration
       </a>
     </li>
@@ -526,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmssw/cmsswconditions/" class="md-nav__link">
+      <a href="../../cmssw/cmsswconditions/" class="md-nav__link">
         Conditions Data
       </a>
     </li>
@@ -604,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datasim/collisiondata/" class="md-nav__link">
+      <a href="../datasim/collisiondata/" class="md-nav__link">
         Collision Data
       </a>
     </li>
@@ -618,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datasim/mcsimulations/" class="md-nav__link">
+      <a href="../datasim/mcsimulations/" class="md-nav__link">
         MC Simulations
       </a>
     </li>
@@ -632,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datasim/eventgeneration/" class="md-nav__link">
+      <a href="../datasim/eventgeneration/" class="md-nav__link">
         Event Generation
       </a>
     </li>
@@ -680,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/validatedRuns/" class="md-nav__link">
+      <a href="../selection/validatedRuns/" class="md-nav__link">
         Validated Runs
       </a>
     </li>
@@ -694,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/triggers/" class="md-nav__link">
+      <a href="../selection/triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -735,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/objects/" class="md-nav__link">
+      <a href="../selection/objects/objects/" class="md-nav__link">
         Physics Objects
       </a>
     </li>
@@ -749,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/tools/" class="md-nav__link">
+      <a href="../selection/objects/tools/" class="md-nav__link">
         Common Tools
       </a>
     </li>
@@ -763,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/muons/" class="md-nav__link">
+      <a href="../selection/objects/muons/" class="md-nav__link">
         Muons
       </a>
     </li>
@@ -777,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/electrons/" class="md-nav__link">
+      <a href="../selection/objects/electrons/" class="md-nav__link">
         Electrons
       </a>
     </li>
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/photons/" class="md-nav__link">
+      <a href="../selection/objects/photons/" class="md-nav__link">
         Photons
       </a>
     </li>
@@ -805,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/jets/" class="md-nav__link">
+      <a href="../selection/objects/jets/" class="md-nav__link">
         Jets
       </a>
     </li>
@@ -819,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/met/" class="md-nav__link">
+      <a href="../selection/objects/met/" class="md-nav__link">
         Missing ET
       </a>
     </li>
@@ -833,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/objects/taus/" class="md-nav__link">
+      <a href="../selection/objects/taus/" class="md-nav__link">
         Taus
       </a>
     </li>
@@ -881,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/tagandprobe/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/tagandprobe/" class="md-nav__link">
         Tag and Probe
       </a>
     </li>
@@ -895,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/signalextraction/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/signalextraction/" class="md-nav__link">
         Signal extraction
       </a>
     </li>
@@ -936,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/tutorial/01-introduction/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/tutorial/01-introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -950,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/tutorial/02-sidebandsubtraction/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/tutorial/02-sidebandsubtraction/" class="md-nav__link">
         Sideband Subtraction
       </a>
     </li>
@@ -964,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/tutorial/03-fitting/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/tutorial/03-fitting/" class="md-nav__link">
         Fitting
       </a>
     </li>
@@ -978,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/tutorial/04-comparison/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/tutorial/04-comparison/" class="md-nav__link">
         Comparison From Sideband or Fitting
       </a>
     </li>
@@ -992,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/tutorial/05-systematic/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/tutorial/05-systematic/" class="md-nav__link">
         Systematic
       </a>
     </li>
@@ -1040,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/macro/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/macro/" class="md-nav__link">
         The Macro
       </a>
     </li>
@@ -1054,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/FitFunctions/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/FitFunctions/" class="md-nav__link">
         FitFunction class
       </a>
     </li>
@@ -1068,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/SidebandSubtraction/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/SidebandSubtraction/" class="md-nav__link">
         SidebandSubtraction class
       </a>
     </li>
@@ -1082,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/InvariantMass/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/InvariantMass/" class="md-nav__link">
         InvariantMass class
       </a>
     </li>
@@ -1096,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/MassValues/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/MassValues/" class="md-nav__link">
         MassValues struct
       </a>
     </li>
@@ -1110,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/Type/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/Type/" class="md-nav__link">
         Type class
       </a>
     </li>
@@ -1124,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/TagProbe/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/TagProbe/" class="md-nav__link">
         TagProbe class
       </a>
     </li>
@@ -1138,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/PtEtaPhi/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/PtEtaPhi/" class="md-nav__link">
         PtEtaPhi class
       </a>
     </li>
@@ -1152,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/sidebandreferenceguide/PassingFailing/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/sidebandreferenceguide/PassingFailing/" class="md-nav__link">
         PassingFailing class
       </a>
     </li>
@@ -1200,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/fittingreferenceguide/overview/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/fittingreferenceguide/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1214,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../selection/idefficiencystudy/fittingreferenceguide/src_files/" class="md-nav__link">
+      <a href="../selection/idefficiencystudy/fittingreferenceguide/src_files/" class="md-nav__link">
         Src files
       </a>
     </li>
@@ -1248,86 +1248,9 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
-          Luminosity
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          Luminosity
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../luminosity/lumi/" class="md-nav__link">
+      <a href="../lumi/" class="md-nav__link">
         Luminosity
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
-          Backgrounds
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Backgrounds
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../techniques/" class="md-nav__link">
-        Techniques
       </a>
     </li>
   
@@ -1349,17 +1272,82 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Background Modelling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        QCD Estimation
+        Background Modelling
       </a>
       
-    </li>
-  
+        
 
-            
-          
-        </ul>
-      </nav>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    Simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tight-loose-or-matrix-methods" class="md-nav__link">
+    Tight / loose or "Matrix" methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-factors" class="md-nav__link">
+    Transfer factors
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alpha-ratio-method" class="md-nav__link">
+    Alpha-ratio method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abcd-method" class="md-nav__link">
+    ABCD method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sideband-fits" class="md-nav__link">
+    Sideband fits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1398,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systematics/lumiuncertain/" class="md-nav__link">
+      <a href="../systematics/lumiuncertain/" class="md-nav__link">
         Luminosity Uncertainties
       </a>
     </li>
@@ -1412,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systematics/mcuncertain/" class="md-nav__link">
+      <a href="../systematics/mcuncertain/" class="md-nav__link">
         MC Uncertainty
       </a>
     </li>
@@ -1453,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systematics/objectsuncertain/leptonuncertain/" class="md-nav__link">
+      <a href="../systematics/objectsuncertain/leptonuncertain/" class="md-nav__link">
         Lepton/Photon uncertainties
       </a>
     </li>
@@ -1467,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systematics/objectsuncertain/jetmetuncertain/" class="md-nav__link">
+      <a href="../systematics/objectsuncertain/jetmetuncertain/" class="md-nav__link">
         Jet/MET uncertainties
       </a>
     </li>
@@ -1481,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systematics/objectsuncertain/btaguncertain/" class="md-nav__link">
+      <a href="../systematics/objectsuncertain/btaguncertain/" class="md-nav__link">
         Tagging uncertainties
       </a>
     </li>
@@ -1502,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systematics/pileupuncertain/" class="md-nav__link">
+      <a href="../systematics/pileupuncertain/" class="md-nav__link">
         Pileup Uncertainty
       </a>
     </li>
@@ -1522,58 +1510,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
-          Interpretation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_6">
-          <span class="md-nav__icon md-icon"></span>
-          Interpretation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../interpretation/stats/" class="md-nav__link">
-        Statistics
+      <a href="../stats/" class="md-nav__link">
+        Statistical Interpretation
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../interpretation/limits/" class="md-nav__link">
-        Upper-limit Calculations
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1593,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1608,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -1635,6 +1575,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    Simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tight-loose-or-matrix-methods" class="md-nav__link">
+    Tight / loose or "Matrix" methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-factors" class="md-nav__link">
+    Transfer factors
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alpha-ratio-method" class="md-nav__link">
+    Alpha-ratio method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abcd-method" class="md-nav__link">
+    ABCD method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sideband-fits" class="md-nav__link">
+    Sideband fits
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1651,11 +1647,122 @@
   
 
 
-<h1 id="qcd-estimation">QCD Estimation<a class="headerlink" href="#qcd-estimation" title="Permanent link">&para;</a></h1>
+<h1 id="background-modelling-techniques">Background Modelling Techniques<a class="headerlink" href="#background-modelling-techniques" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This page is under construction</p>
 </div>
+<p>Accurate modeling of SM background processes is essential to most searches and measurements in high energy physics.
+The dominant background processes depend strongly on the selected objects, particularly leptons, missing
+transverse momentum, and b quark jets or jets from boosted particles. Background estimation strategies
+are always tailored to an individual analysis, typically as a variation of one or more of the following
+common methods.</p>
+<h2 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h2>
+<p>Many SM processes are simulated at NLO, which provides a strong basis for background
+estimation. For processes such as W/Z+jets production that are often simulated at LO, <em>k</em>-factor
+calculations allows one to weight simulated events to reproduce predictions of distributions at NLO.
+In final states with charged leptons, for which QCD multijet production is unlikely to be a significant background, simulation is a common choice.
+Additionally, the majority of searches utilize simulation to model the signal process under consideration.</p>
+<p>Simulated events are weighted so that the efficiencies of certain selections
+in simulation match those observed in data. These corrections are referred to as ``scale factors''.
+Common scale factors in searches at the CMS experiment correct
+for differences in :</p>
+<ul>
+<li>the number of pileup interactions</li>
+<li>the efficiencies of trigger selections</li>
+<li>the efficiencies of charged lepton identification and isolation selection criteria</li>
+<li>the efficiencies of various jet identification selection criteria, such as heavy-flavor tagging.</li>
+</ul>
+<p>A detailed set of <a href="../systematics/objectsuncertain/jetmetuncertain/">corrections for the jet energy scale and resolution</a> are computed for simulated events so that the
+response of the jet reconstruction algorithms is consistent between observed data and simulation. Searches may also develop
+correction formulas to correct for observed mismodeling of data by simulation in certain distributions of interest.
+A common correction of this type is to reweight the reconstructed top quark \pt spectrum, since the NLO top quark pair simulations
+tend to overpredict the rate of high-\pt top quark pairs. Each correction applied to simulation carries an uncertainty
+that should be taken into account in the statistical methods of signal extraction.</p>
+<h2 id="tight-loose-or-matrix-methods">Tight / loose or "Matrix" methods<a class="headerlink" href="#tight-loose-or-matrix-methods" title="Permanent link">&para;</a></h2>
+<p>Searches that select multiple charged leptons often have considerable background
+from events in which <em>nonprompt</em> leptons are selected. Nonprompt leptons are usually charged leptons that arise from
+sources other than the hard scatter or decays of massive particles produced in the hard scatter.</p>
+<p>One method to estimate contributions from these events is to measure how often known prompt leptons, typically from the
+decay of Z bosons, and known nonprompt leptons, typically from a sample of QCD multijet events, pass a certain set of
+lepton selection criteria. A Z boson sample is created in data by selecting events with two same-flavor opposite-sign
+leptons whose mass lies very close to the Z boson mass. One lepton, known as the <em>tag</em>, is selected using very high-purity
+selection criteria, giving confidence that the other <em>probe</em> lepton is indeed a prompt lepton. The efficiency for the
+probe lepton to pass any criteria of interest can then be measured in this sample (learn more about this calculation
+on the <a href="../selection/idefficiencystudy/tagandprobe/">tag and probe page</a>). In the context of this background
+estimation method, the efficiency of the analysis selection criteria is referred to as the <em>prompt rate</em>, <span class="arithmatex">\(p\)</span>.</p>
+<p>A QCD multijet sample can be created by selecting events that pass a low-momentum, low-purity, single-lepton trigger, but otherwise
+exhibit no strong signs of the lepton arising from a SM boson decay. The rate at which these leptons pass the analysis selection
+criteria can be measured, and is referred to as the <em>nonprompt</em> rate (or colloquially, <em>fake</em> rate), <span class="arithmatex">\(f\)</span>. Both of these rates
+describe how often either prompt or nonprompt leptons that pass some baseline <em>loose</em> selection also pass the <em>tight</em>
+selection criteria used in the analysis.</p>
+<p>For searches that probe final states with two charged leptons, the probabilities for any prompt or nonprompt lepton to enter the sample must be considered
+together to develop a background distribution.
+The number of events with leptons passing the tight and/or loose criteria may be observed, in particular the number of events with two tight leptons, <span class="arithmatex">\(N_{tt}\)</span>; one tight and one loose lepton, <span class="arithmatex">\(N_{tl}\)</span>; and two loose leptons, <span class="arithmatex">\(N_{ll}\)</span>.
+The prompt and nonprompt rates may then be used to convert those observations into numbers of events with two prompt leptons, <span class="arithmatex">\(N_{pp}\)</span>; one prompt and one nonprompt lepton, <span class="arithmatex">\(N_{pf}\)</span>; and two nonprompt leptons, <span class="arithmatex">\(N_{ff}\)</span>.</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+  N_{tt} \\
+  N_{tl} \\
+  N_{ll}
+\end{pmatrix} = \left( \begin{array}{ccc}
+  p^2 &amp; pf &amp; f^2 \\
+  2p(1-p) &amp; f(1-p) + p(1-f) &amp; 2f(1-f) \\
+  (1-p)^2 &amp; (1-p)(1-f) &amp; (1-f)^2
+\end{array} \right)
+\begin{pmatrix}
+  N_{pp}\\
+  N_{pf}\\
+  N_{ff}
+\end{pmatrix}
+\]</div>
+<p>A matrix inversion provides formulas to calculate <span class="arithmatex">\(N_{pf}\)</span> and <span class="arithmatex">\(N_{ff}\)</span> from the observed number of events with leptons of
+varying quality. For a search selecting two tight leptons, the background from events with nonprompt leptons will be given
+by <span class="arithmatex">\(N_{\mathrm{bkg}} = pfN_{pf} + f^2N_{ff}\)</span>. This method can be extended to searches targeting final states more than two charged leptons by expanding the probability matrix.</p>
+<p>A good reference for this method, built on earlier uses within CMS, is the <a href="http://cds.cern.ch/record/2808538">2022 doctoral thesis of Wing Yan Wong</a>.</p>
+<h2 id="transfer-factors">Transfer factors<a class="headerlink" href="#transfer-factors" title="Permanent link">&para;</a></h2>
+<p>In many searches, one important selection criterion is the primary dividing line between
+a background-dominated control region (CR) and a region with good signal sensitivity, called the signal region (SR).
+A <em>transfer factor</em> or <em>transfer function</em>
+that describes the efficiency of this principle selection criteria can be derived and applied to the observed data in the
+CR in order to estimate the background present in the SR.</p>
+<h3 id="alpha-ratio-method">Alpha-ratio method<a class="headerlink" href="#alpha-ratio-method" title="Permanent link">&para;</a></h3>
+<p>The transfer function can be computed in multiple ways. Some searches use simulation for this purpose, in which
+case the method is often called the <em>alpha-ratio method</em>. The number of background events in the SR, <span class="arithmatex">\(N_{\mathrm{SR}}^{bkg}\)</span>, is calculated
+as:</p>
+<div class="arithmatex">\[
+N_{\mathrm{SR}}^{bkg} = N_\mathrm{CR}^{data} \times \frac{N_{\mathrm{SR}}^{sim}}{N_{\mathrm{CR}}^{sim}},
+\]</div>
+<p>where <span class="arithmatex">\(N_\mathrm{CR}^{data}\)</span> is the number of observed collision events in the CR, <span class="arithmatex">\(N_{\mathrm{SR}}^{sim}\)</span> is the number of simulated events in the SR,
+and <span class="arithmatex">\(N_{\mathrm{CR}}^{sim}\)</span> is the number of simulated events in the CR.
+The transfer factor from simulation can be computed in any bin of an observable, so the shape as well as the rate of
+background in the SR may be obtained.</p>
+<h3 id="abcd-method">ABCD method<a class="headerlink" href="#abcd-method" title="Permanent link">&para;</a></h3>
+<p>Other searches measure transfer factors using observed data in selection regions that are distinct from the primary SR and CR,
+in which case the method might be referred to as the <strong>ABCD method</strong>. This method is particularly popular for dealing with multijet
+backgrounds that are not typically modelled well by simulation.</p>
+<p>Four selection regions in the observed data are involved,
+formed by events either passing or failing either of two selection criteria, as shown in the graphic below. The
+number of background events in the SR (region C), <span class="arithmatex">\(N_\mathrm{C}\)</span>, is calculated from observations in regions A, B, and D as
+<span class="arithmatex">\(N_\mathrm{D} \times (N_\mathrm{B} / N_\mathrm{A})\)</span>. This method may also be used in any bin of an observable to obtain a shape-based prediction for the background.
+In general, the ABCD method requires that the selection criteria are statistically independent in order to produce unbiased predictions.</p>
+<p><img alt="Demonstration of the ABCD method" src="../../images/ABCD.png" /></p>
+<p>If some background sources are well-modelled by
+simulation, these contributions may be subtracted from the observed data in each region before computing or applying the transfer function.
+More than four regions can be used to incorporate a method for validation into the procedure, as shown in the second graphic.
+The number of background events in the validation region X is estimated from the observations in regions A, D, and Y as <span class="arithmatex">\(N_\mathrm{D} \times (N_\mathrm{Y} / N_\mathrm{A})\)</span>, and if region X has a suitably low rate of
+expected signal events the observed data in this region could be compared to the background prediction, to test the validity
+of the prediction method.</p>
+<p><img alt="Demonstration of ABCD method with a validation region" src="../../images/ABCDext.png" /></p>
+<h2 id="sideband-fits">Sideband fits<a class="headerlink" href="#sideband-fits" title="Permanent link">&para;</a></h2>
+<p>In many searches, the observable most sensitive to the signal is a reconstructed mass
+or jet mass distribution, in which the signal is expected to be resonant while the dominant background
+processes are non-resonant. The shape of the background distribution may then be predicted by fitting a smooth
+functional form to the observed data on either side of the region in which the signal distribution is expected to peak. This method
+may be used in multiple dimensions for signals that feature more than one resonance.</p>
+<p>When multiple functional forms offer adequate fits to the observed data, an F-statistic may be used to compare the residual sums of
+squares for two formulas and determine whether a formula with more parameters provides a significantly better
+fit than an alternate formula with fewer parameters (known as the Fischer <span class="arithmatex">\(\mathcal{F}\)</span>-test).</p>
 
 
 
@@ -1693,10 +1800,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
